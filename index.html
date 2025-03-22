@@ -3,100 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chuck a Sickie - Medical Certificate Generator</title>
+    <title>Chuck a Sickie - Your Ticket to Freedom</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body class="bg-gray-100 min-h-screen">
-    <div class="container mx-auto p-6 max-w-4xl">
-        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h1 class="text-3xl font-bold text-gray-800 mb-6">Chuck a Sickie - Medical Certificate Generator</h1>
+<body class="bg-gradient-to-br from-blue-50 to-purple-100 min-h-screen">
+    <!-- Hero Section -->
+    <div id="landing" class="container mx-auto px-6 py-16 max-w-6xl">
+        <div class="flex flex-col items-center text-center mb-12">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500 mb-6">
+                Chuck a Sickie
+            </h1>
+            <p class="text-2xl text-gray-700 mb-4">Your One-Way Ticket to a Day of Sweet, Sweet Freedom</p>
+            <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full mb-8"></div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="form-group">
-                    <label for="pharmacy-name" class="block text-sm font-medium text-gray-700 mb-1">Pharmacy Name:</label>
-                    <input type="text" id="pharmacy-name" value="PRICELINE PHARMACY ROSELANDS" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            <div class="max-w-3xl mx-auto bg-white bg-opacity-80 backdrop-filter backdrop-blur-sm rounded-xl shadow-xl p-8 mb-10">
+                <div class="text-left mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Feeling a bit... <span class="italic">under the weather?</span> <i class="fas fa-wink text-yellow-500"></i></h2>
+                    <p class="text-gray-700 text-lg mb-3">We've all been there. That meeting you can't bear to attend. That deadline that's squeezing your soul. That colleague who just won't. stop. talking.</p>
+                    <p class="text-gray-700 text-lg mb-3">Sometimes you just need a day to regroup, recharge, and remind yourself what sunlight looks like!</p>
+                    <p class="text-gray-700 text-lg font-semibold">No judgment here. We get it. Life happens!</p>
                 </div>
                 
-                <div class="form-group">
-                    <label for="pharmacy-address1" class="block text-sm font-medium text-gray-700 mb-1">Address Line 1:</label>
-                    <input type="text" id="pharmacy-address1" value="SHOP L25, LOWER GROUND," class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-blue-50 rounded-lg p-4 shadow-md">
+                        <div class="text-blue-500 text-4xl mb-2"><i class="fas fa-bed"></i></div>
+                        <h3 class="font-bold text-gray-800 mb-2">Rest Up</h3>
+                        <p class="text-gray-600">Because your couch misses you terribly</p>
+                    </div>
+                    <div class="bg-purple-50 rounded-lg p-4 shadow-md">
+                        <div class="text-purple-500 text-4xl mb-2"><i class="fas fa-tv"></i></div>
+                        <h3 class="font-bold text-gray-800 mb-2">Binge Watch</h3>
+                        <p class="text-gray-600">Those shows aren't going to watch themselves</p>
+                    </div>
+                    <div class="bg-green-50 rounded-lg p-4 shadow-md">
+                        <div class="text-green-500 text-4xl mb-2"><i class="fas fa-spa"></i></div>
+                        <h3 class="font-bold text-gray-800 mb-2">Self Care</h3>
+                        <p class="text-gray-600">You can't pour from an empty cup</p>
+                    </div>
                 </div>
                 
-                <div class="form-group">
-                    <label for="pharmacy-address2" class="block text-sm font-medium text-gray-700 mb-1">Address Line 2:</label>
-                    <input type="text" id="pharmacy-address2" value="ROSELANDS SHOPPING CENTRE" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                </div>
-                
-                <div class="form-group">
-                    <label for="pharmacy-address3" class="block text-sm font-medium text-gray-700 mb-1">Address Line 3:</label>
-                    <input type="text" id="pharmacy-address3" value="ROSELANDS DRIVE" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                </div>
-                
-                <div class="form-group">
-                    <label for="pharmacy-address4" class="block text-sm font-medium text-gray-700 mb-1">Address Line 4:</label>
-                    <input type="text" id="pharmacy-address4" value="ROSELANDS" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                </div>
-                
-                <div class="form-group">
-                    <label for="pharmacy-postcode" class="block text-sm font-medium text-gray-700 mb-1">State & Postcode:</label>
-                    <input type="text" id="pharmacy-postcode" value="NSW 2196" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                </div>
-                
-                <div class="form-group">
-                    <label for="pharmacy-phone" class="block text-sm font-medium text-gray-700 mb-1">Phone:</label>
-                    <input type="text" id="pharmacy-phone" value="02 9759 1444" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                </div>
-                
-                <div class="form-group">
-                    <label for="pharmacy-fax" class="block text-sm font-medium text-gray-700 mb-1">Fax:</label>
-                    <input type="text" id="pharmacy-fax" value="02 9759 9205" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                </div>
-                
-                <div class="form-group">
-                    <label for="pharmacy-email" class="block text-sm font-medium text-gray-700 mb-1">Email:</label>
-                    <input type="text" id="pharmacy-email" value="priosmanagement@gmail.com" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                </div>
-                
-                <div class="form-group">
-                    <label for="patient-name" class="block text-sm font-medium text-gray-700 mb-1">Patient Name:</label>
-                    <input type="text" id="patient-name" value="MOEY DONTWORRY" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                </div>
-                
-                <div class="form-group">
-                    <label for="patient-address" class="block text-sm font-medium text-gray-700 mb-1">Patient Address:</label>
-                    <input type="text" id="patient-address" value="1 PEEKABOO AVE, WONDERLAND NSW 2196" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                </div>
-                
-                <div class="form-group">
-                    <label for="cert-date" class="block text-sm font-medium text-gray-700 mb-1">Certificate Date:</label>
-                    <input type="date" id="cert-date" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                </div>
-                
-                <div class="form-group">
-                    <label for="leave-start" class="block text-sm font-medium text-gray-700 mb-1">Leave Start Date:</label>
-                    <input type="date" id="leave-start" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                </div>
-                
-                <div class="form-group">
-                    <label for="leave-end" class="block text-sm font-medium text-gray-700 mb-1">Leave End Date:</label>
-                    <input type="date" id="leave-end" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                </div>
-                
-                <div class="form-group">
-                    <label for="pharmacist-name" class="block text-sm font-medium text-gray-700 mb-1">Pharmacist Name:</label>
-                    <input type="text" id="pharmacist-name" value="JASON DEMYANE" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                </div>
-                
-                <div class="form-group">
-                    <label for="registration-no" class="block text-sm font-medium text-gray-700 mb-1">Registration Number:</label>
-                    <input type="text" id="registration-no" value="PHA0002242371" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <div class="flex flex-col items-center">
+                    <p class="text-gray-800 text-xl italic mb-6">"Sometimes the most productive thing you can do is relax." — Mark Black</p>
+                    <button id="show-generator" class="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 p-0.5 text-xl font-medium text-white hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-300">
+                        <span class="relative rounded-md bg-white px-8 py-3.5 transition-all duration-75 ease-in text-gray-800 hover:bg-opacity-0 hover:text-white">
+                            <i class="fas fa-magic mr-2"></i> Generate Your Freedom Pass
+                        </span>
+                    </button>
+                    <p class="text-gray-500 mt-4 text-sm">* For educational purposes only. Use responsibly and at your own risk.</p>
                 </div>
             </div>
             
-            <button onclick="generateCertificate()" class="mt-6 bg-gradient-to-r from-green-500 to-green-600 text-white py-2 px-6 rounded-md hover:from-green-600 hover:to-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transform transition hover:scale-105 font-medium">Generate Certificate</button>
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl">
+                <div class="flex flex-col items-center">
+                    <div class="rounded-full bg-green-100 w-16 h-16 flex items-center justify-center mb-4">
+                        <i class="fas fa-bolt text-green-500 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800 mb-2">Quick & Easy</h3>
+                    <p class="text-center text-gray-600">Less than 2 minutes to freedom</p>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                    <div class="rounded-full bg-blue-100 w-16 h-16 flex items-center justify-center mb-4">
+                        <i class="fas fa-print text-blue-500 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800 mb-2">Print Ready</h3>
+                    <p class="text-center text-gray-600">Professional-looking document</p>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                    <div class="rounded-full bg-purple-100 w-16 h-16 flex items-center justify-center mb-4">
+                        <i class="fas fa-lock text-purple-500 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800 mb-2">Private & Secure</h3>
+                    <p class="text-center text-gray-600">All data stays in your browser</p>
+                </div>
+            </div>
         </div>
-        
-        <div id="certificate-container"></div>
+    </div>
+    
+    <!-- Generator section (hidden by default) -->
+    <div id="generator" class="hidden">
+        <div class="container mx-auto p-6 max-w-4xl">
+            <button id="back-to-landing" class="mb-6 inline-flex items-center text-blue-600 hover:text-blue-800">
+                <i class="fas fa-arrow-left mr-2"></i> Back to landing page
+            </button>
+            
+            <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+                <h1 class="text-3xl font-bold text-gray-800 mb-6">Chuck a Sickie - Medical Certificate Generator</h1>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="form-group">
+                        <label for="pharmacy-name" class="block text-sm font-medium text-gray-700 mb-1">Pharmacy Name:</label>
+                        <input type="text" id="pharmacy-name" value="PRICELINE PHARMACY ROSELANDS" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pharmacy-address1" class="block text-sm font-medium text-gray-700 mb-1">Address Line 1:</label>
+                        <input type="text" id="pharmacy-address1" value="SHOP L25, LOWER GROUND," class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pharmacy-address2" class="block text-sm font-medium text-gray-700 mb-1">Address Line 2:</label>
+                        <input type="text" id="pharmacy-address2" value="ROSELANDS SHOPPING CENTRE" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pharmacy-address3" class="block text-sm font-medium text-gray-700 mb-1">Address Line 3:</label>
+                        <input type="text" id="pharmacy-address3" value="ROSELANDS DRIVE" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pharmacy-address4" class="block text-sm font-medium text-gray-700 mb-1">Address Line 4:</label>
+                        <input type="text" id="pharmacy-address4" value="ROSELANDS" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pharmacy-postcode" class="block text-sm font-medium text-gray-700 mb-1">State & Postcode:</label>
+                        <input type="text" id="pharmacy-postcode" value="NSW 2196" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pharmacy-phone" class="block text-sm font-medium text-gray-700 mb-1">Phone:</label>
+                        <input type="text" id="pharmacy-phone" value="02 9759 1444" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pharmacy-fax" class="block text-sm font-medium text-gray-700 mb-1">Fax:</label>
+                        <input type="text" id="pharmacy-fax" value="02 9759 9205" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pharmacy-email" class="block text-sm font-medium text-gray-700 mb-1">Email:</label>
+                        <input type="text" id="pharmacy-email" value="priosmanagement@gmail.com" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="patient-name" class="block text-sm font-medium text-gray-700 mb-1">Patient Name:</label>
+                        <input type="text" id="patient-name" value="MOEY DONTWORRY" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="patient-address" class="block text-sm font-medium text-gray-700 mb-1">Patient Address:</label>
+                        <input type="text" id="patient-address" value="1 PEEKABOO AVE, WONDERLAND NSW 2196" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cert-date" class="block text-sm font-medium text-gray-700 mb-1">Certificate Date:</label>
+                        <input type="date" id="cert-date" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="leave-start" class="block text-sm font-medium text-gray-700 mb-1">Leave Start Date:</label>
+                        <input type="date" id="leave-start" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="leave-end" class="block text-sm font-medium text-gray-700 mb-1">Leave End Date:</label>
+                        <input type="date" id="leave-end" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pharmacist-name" class="block text-sm font-medium text-gray-700 mb-1">Pharmacist Name:</label>
+                        <input type="text" id="pharmacist-name" value="JASON DEMYANE" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="registration-no" class="block text-sm font-medium text-gray-700 mb-1">Registration Number:</label>
+                        <input type="text" id="registration-no" value="PHA0002242371" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                </div>
+                
+                <button onclick="generateCertificate()" class="mt-6 bg-gradient-to-r from-green-500 to-green-600 text-white py-2 px-6 rounded-md hover:from-green-600 hover:to-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transform transition hover:scale-105 font-medium">Generate Certificate</button>
+            </div>
+            
+            <div id="certificate-container"></div>
+        </div>
     </div>
     
     <script>
@@ -111,6 +193,9 @@
             const tomorrow = new Date();
             tomorrow.setDate(today.getDate() + 1);
             document.getElementById('leave-end').value = tomorrow.toISOString().substr(0, 10);
+            
+            // Add event listeners
+            attachEventListeners();
         };
         
         function formatDate(dateString) {
@@ -150,7 +235,7 @@
             
             // Create the certificate HTML with Tailwind classes
             const certificateHTML = `
-                <div class="bg-white rounded-lg shadow-lg p-6 mb-8 max-w-4xl mx-auto" style="width: 210mm; height: auto; max-height: 280mm;">
+                <div id="printable-certificate" class="bg-white rounded-lg shadow-lg p-6 mb-8 max-w-4xl mx-auto" style="width: 210mm; height: auto; max-height: 280mm;">
                     <div class="flex justify-between items-start mb-8">
                         <div class="flex items-start">
                             <div class="pharmacy-logo w-40 text-center mr-4">
@@ -158,12 +243,12 @@
                             </div>
                             
                             <div class="pharmacy-info">
-                                <p class="font-bold uppercase">PRICELINE PHARMACY ROSELANDS</p>
-                                <p class="uppercase">SHOP L25, LOWER GROUND,</p>
-                                <p class="uppercase">ROSELANDS SHOPPING CENTRE</p>
-                                <p class="uppercase">ROSELANDS DRIVE</p>
-                                <p class="uppercase">ROSELANDS</p>
-                                <p class="uppercase">NSW 2196</p>
+                                <p class="font-bold uppercase">${pharmacyName}</p>
+                                <p class="uppercase">${pharmacyAddress1}</p>
+                                <p class="uppercase">${pharmacyAddress2}</p>
+                                <p class="uppercase">${pharmacyAddress3}</p>
+                                <p class="uppercase">${pharmacyAddress4}</p>
+                                <p class="uppercase">${pharmacyPostcode}</p>
                                 <p>Phone: ${pharmacyPhone}</p>
                                 <p>Fax: ${pharmacyFax}</p>
                                 <p>Email: ${pharmacyEmail}</p>
@@ -207,7 +292,12 @@
                 </div>
                 
                 <div class="text-center mb-12">
-                    <button onclick="window.print()" class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition transform hover:scale-105 print:hidden">Print Certificate</button>
+                    <button onclick="printCertificate()" class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition transform hover:scale-105 print:hidden mr-4">
+                        <i class="fas fa-print mr-2"></i> Print Certificate
+                    </button>
+                    <button onclick="confetti()" class="bg-purple-500 hover:bg-purple-600 text-white font-medium py-2 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 transition transform hover:scale-105 print:hidden">
+                        <i class="fas fa-glass-cheers mr-2"></i> Celebrate Your Day Off!
+                    </button>
                 </div>
             `;
             
@@ -217,34 +307,132 @@
             // Scroll to the certificate
             document.getElementById('certificate-container').scrollIntoView({ behavior: 'smooth' });
         }
+        
+        // Print only the certificate
+        function printCertificate() {
+            const printContent = document.getElementById('printable-certificate');
+            const originalDocument = document.body.innerHTML;
+            
+            // Only print the certificate
+            document.body.innerHTML = printContent.outerHTML;
+            
+            // Print
+            window.print();
+            
+            // Restore original content
+            document.body.innerHTML = originalDocument;
+            
+            // Re-add event listeners after restoring the document
+            setTimeout(() => {
+                attachEventListeners();
+                // Re-select the certificate if it was previously generated
+                const certificate = document.getElementById('printable-certificate');
+                if (certificate) {
+                    certificate.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
+        }
+        
+        // Attach all event listeners
+        function attachEventListeners() {
+            // Landing page button
+            const showGeneratorBtn = document.getElementById('show-generator');
+            if (showGeneratorBtn) {
+                showGeneratorBtn.addEventListener('click', function() {
+                    document.getElementById('landing').classList.add('hidden');
+                    document.getElementById('generator').classList.remove('hidden');
+                });
+            }
+            
+            // Back button
+            const backToLandingBtn = document.getElementById('back-to-landing');
+            if (backToLandingBtn) {
+                backToLandingBtn.addEventListener('click', function() {
+                    document.getElementById('generator').classList.add('hidden');
+                    document.getElementById('landing').classList.remove('hidden');
+                });
+            }
+            
+            // Generate button
+            const generateCertBtn = document.querySelector('button[onclick="generateCertificate()"]');
+            if (generateCertBtn) {
+                generateCertBtn.onclick = generateCertificate;
+            }
+            
+            // Print buttons
+            const printBtns = document.querySelectorAll('button[onclick="printCertificate()"]');
+            printBtns.forEach(btn => {
+                btn.onclick = printCertificate;
+            });
+            
+            // Confetti buttons
+            const confettiBtns = document.querySelectorAll('button[onclick="confetti()"]');
+            confettiBtns.forEach(btn => {
+                btn.onclick = confetti;
+            });
+        }
+        
+        
+        // Simple confetti function
+        function confetti() {
+            const colors = ['#ff718d', '#fdbb2d', '#22c1c3', '#b721ff', '#21d4fd'];
+            const container = document.createElement('div');
+            container.style.position = 'fixed';
+            container.style.top = '0';
+            container.style.left = '0';
+            container.style.width = '100%';
+            container.style.height = '100%';
+            container.style.pointerEvents = 'none';
+            container.style.zIndex = '9999';
+            document.body.appendChild(container);
+            
+            for (let i = 0; i < 200; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.style.position = 'absolute';
+                    confetti.style.width = Math.random() * 10 + 5 + 'px';
+                    confetti.style.height = Math.random() * 10 + 5 + 'px';
+                    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+                    confetti.style.left = Math.random() * 100 + 'vw';
+                    confetti.style.top = '-20px';
+                    confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+                    container.appendChild(confetti);
+                    
+                    let speed = Math.random() * 3 + 2;
+                    let rotateSpeed = Math.random() * 5 - 2.5;
+                    let horizontalSpeed = Math.random() * 5 - 2.5;
+                    
+                    const fall = () => {
+                        const top = parseFloat(confetti.style.top);
+                        const left = parseFloat(confetti.style.left);
+                        const rotate = parseFloat(confetti.style.transform.replace('rotate(', '').replace('deg)', ''));
+                        
+                        if (top < window.innerHeight) {
+                            confetti.style.top = top + speed + 'px';
+                            confetti.style.left = left + horizontalSpeed + 'vw';
+                            confetti.style.transform = `rotate(${rotate + rotateSpeed}deg)`;
+                            requestAnimationFrame(fall);
+                        } else {
+                            confetti.remove();
+                        }
+                    };
+                    
+                    requestAnimationFrame(fall);
+                }, Math.random() * 1500);
+            }
+            
+            setTimeout(() => {
+                container.remove();
+            }, 10000);
+        }
     </script>
 
     <style>
         @media print {
-            .container > div:first-child {
-                display: none;
-            }
-            #certificate-container > div {
-                box-shadow: none;
-                margin: 0;
-                padding: 10px;
-                height: 96vh !important;
-                max-height: 96vh !important;
-                page-break-after: avoid;
-                page-break-inside: avoid;
-            }
-            .signature-section {
-                margin-top: 1rem !important;
-            }
-            .footer-text {
-                margin-top: 0.5rem !important;
-            }
-            .print\:hidden {
+            /* We don't need the CSS media query anymore since we're using JavaScript */
+            .print-hidden {
                 display: none !important;
-            }
-            body {
-                margin: 0;
-                padding: 0;
             }
         }
     </style>
