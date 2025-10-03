@@ -236,8 +236,10 @@
             
             // Create the certificate HTML with Tailwind classes
             const certificateHTML = `
-                <div id="printable-certificate" class="bg-white rounded-lg shadow-lg p-6 mb-8 max-w-4xl mx-auto" style="width: 210mm; height: auto; max-height: 280mm;">
-                    <div class="flex justify-between items-start mb-8">
+   <div
+  id="printable-certificate"
+  class="certificate-wrapper bg-white rounded-lg shadow-lg p-6 mb-8 max-w-4xl mx-auto print:bg-transparent print:shadow-none print:rounded-none print:p-0 print:m-0 print:max-w-full print:w-auto print:mx-0" style="width: 210mm; height: auto; max-height: 280mm;">
+            <div class="flex justify-between items-start mb-8">
                         <div class="flex items-start">
                             <div class="pharmacy-logo w-40 text-center mr-4">
                                 <img src="priceline-logo2.webp" alt="Priceline Pharmacy Logo" class="w-full h-auto">
@@ -293,6 +295,11 @@
                 </div>
                 
                 <div class="text-center mb-12">
+                    <p class="text-sm text-gray-500 print:hidden">
+    Tip: For a clean certificate, disable headers and footers in your print settings.
+</p>
+</br>
+
                     <button onclick="printCertificate()" class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition transform hover:scale-105 print:hidden mr-4">
                         <i class="fas fa-print mr-2"></i> Print Certificate
                     </button>
@@ -430,12 +437,83 @@
     </script>
 
     <style>
-        @media print {
-            /* We don't need the CSS media query anymore since we're using JavaScript */
-            .print-hidden {
-                display: none !important;
-            }
-        }
+   @media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-certificate, #printable-certificate * {
+    visibility: visible;
+  }
+  #printable-certificate {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  /* Hide page URL / title (sometimes browsers honor this) */
+  @page {
+    margin: 20mm;
+    size: A4 portrait;
+  }
+}
+
+
+@media print {
+  .certificate-wrapper {
+    background: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+@media print {
+  /* kill any page background/gradients */
+  html, body {
+    background: #ffffff !important;
+  }
+
+  /* hard override the wrapper, in case classes change later */
+  #printable-certificate {
+    background: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* neutralize common Tailwind “boxy” utilities anywhere inside */
+  .shadow, .shadow-md, .shadow-lg, .shadow-xl, .shadow-2xl,
+  .rounded, .rounded-md, .rounded-lg, .rounded-xl, .rounded-2xl {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+
+  /* if your page has containers that center/narrow the layout, let the cert go full width on paper */
+  .container, .mx-auto, .max-w-4xl {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* optional: keep your internal content margins readable without the outer “card” padding */
+  #printable-certificate .certificate-body {
+    padding: 0 !important;
+  }
+
+  /* page setup (doesn’t control headers/footers, but sets nice margins) */
+  @page {
+    size: A4 portrait;
+    margin: 20mm;
+  }
+}
     </style>
 </body>
 </html>
