@@ -3,93 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chuck a Sickie - Your Ticket to Freedom</title>
+    <title>Online Medical Certificate | Fast, Simple & Secure</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- html2canvas and jsPDF (needed for screenshot -> PDF) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body { font-family: 'Inter', system_ui, sans-serif; }
+    </style>
 </head>
-<body class="bg-gradient-to-br from-blue-50 to-purple-100 min-h-screen">
-    <!-- Hero Section -->
-    <div id="landing" class="container mx-auto px-6 py-16 max-w-6xl">
-        <div class="flex flex-col items-center text-center mb-12">
-            <img src="logo-transparent.png" alt="Logo" class="h-80 w-auto">
-            <p class="text-2xl text-gray-700 mb-4">Your One-Way Ticket to a Day of Sweet, Sweet Freedom</p>
-            <div class="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full mb-8"></div>
-            
-            <div class="max-w-3xl mx-auto bg-white bg-opacity-80 backdrop-filter backdrop-blur-sm rounded-xl shadow-xl p-8 mb-10">
-                <div class="text-left mb-8">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Feeling a bit... <span class="italic">under the weather?</span> <i class="fas fa-wink text-yellow-500"></i></h2>
-                    <p class="text-gray-700 text-lg mb-3">We've all been there. That meeting you can't bear to attend. That deadline that's squeezing your soul. That colleague who just won't. stop. talking.</p>
-                    <p class="text-gray-700 text-lg mb-3">Sometimes you just need a day to regroup, recharge, and remind yourself what sunlight looks like!</p>
-                    <p class="text-gray-700 text-lg font-semibold">No judgment here. We get it. Life happens!</p>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                    <div class="bg-blue-50 rounded-lg p-4 shadow-md">
-                        <div class="text-blue-500 text-4xl mb-2"><i class="fas fa-bed"></i></div>
-                        <h3 class="font-bold text-gray-800 mb-2">Rest Up</h3>
-                        <p class="text-gray-600">Because your couch misses you terribly</p>
-                    </div>
-                    <div class="bg-purple-50 rounded-lg p-4 shadow-md">
-                        <div class="text-purple-500 text-4xl mb-2"><i class="fas fa-tv"></i></div>
-                        <h3 class="font-bold text-gray-800 mb-2">Binge Watch</h3>
-                        <p class="text-gray-600">Those shows aren't going to watch themselves</p>
-                    </div>
-                    <div class="bg-green-50 rounded-lg p-4 shadow-md">
-                        <div class="text-green-500 text-4xl mb-2"><i class="fas fa-spa"></i></div>
-                        <h3 class="font-bold text-gray-800 mb-2">Self Care</h3>
-                        <p class="text-gray-600">You can't pour from an empty cup</p>
-                    </div>
-                </div>
-                
-                <div class="flex flex-col items-center">
-                    <p class="text-gray-800 text-xl italic mb-6">"Sometimes the most productive thing you can do is relax." — Mark Black</p>
-                    <button id="show-generator" class="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 p-0.5 text-xl font-medium text-white hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-300">
-                       <a
-  href="https://buy.stripe.com/dRm5kDbFngKq9GIfz7gw00O"
-  class="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-pink-600 to-purple-600 p-0.5 text-xl font-medium text-white"
->
-  <span class="relative rounded-md bg-white px-8 py-3.5 text-gray-800 hover:bg-opacity-0 hover:text-white transition">
-    <i class="fas fa-credit-card mr-2"></i> Pay $10 & Generate
-  </span>
-</a>
+<body class="bg-zinc-50 min-h-screen">
 
-                    </button>
-                    <p class="text-gray-500 mt-4 text-sm">* For fully sick cunt purposes only. Use responsibly and at your own risk.</p>
+<!-- Hero Section -->
+<div id="landing" class="bg-white">
+    <div class="max-w-6xl mx-auto px-6 py-20">
+        
+        <!-- Brand Name + Logo (Top Center) -->
+        <div class="flex flex-col items-center mb-12">
+            <img src="logo-transparent-without-text.png" 
+                 alt="Chuck A Sickie" 
+                 class="h-20 w-auto mb-3">
+            <h2 class="text-2xl font-semibold text-zinc-800 tracking-tight">
+                Chuck A Sickie
+            </h2>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-16 items-center">
+            <!-- Left Content -->
+            <div class="flex-1">
+                <div class="flex items-center gap-2 text-orange-600 font-medium mb-6">
+                    <i class="fas fa-clock"></i>
+                    <span>Reclaim Your Day</span>
                 </div>
+                
+                <h1 class="text-5xl lg:text-6xl font-bold text-zinc-900 leading-none tracking-tighter mb-4">
+                    Online Medical Certificate
+                </h1>
+                <p class="text-3xl text-zinc-700 font-medium mb-8">Fast, Simple & Secure</p>
+                
+                <p class="text-lg text-zinc-600 max-w-md mb-10">
+                    Get a professionally formatted medical certificate online whenever you need time off to rest and recover. 
+                    Ideal for short-term personal leave due to illness, fatigue, or health-related reasons.
+                </p>
+
+                <!-- Trust Badges -->
+                <div class="flex flex-wrap gap-x-8 gap-y-3 text-sm mb-12">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-check-circle text-emerald-500"></i>
+                        <span class="font-medium">Under 2 minutes</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-check-circle text-emerald-500"></i>
+                        <span class="font-medium">Private & Secure</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-check-circle text-emerald-500"></i>
+                        <span class="font-medium">Instant delivery</span>
+                    </div>
+                </div>
+
+                <!-- Primary CTA -->
+                <a href="https://buy.stripe.com/dRm5kDbFngKq9GIfz7gw00O"
+                   class="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-semibold text-xl px-12 py-5 rounded-2xl shadow-xl transition-all hover:shadow-2xl hover:-translate-y-0.5 w-full lg:w-auto">
+                    <i class="fas fa-credit-card mr-3"></i>
+                    Generate your Medical Certificate Now
+                </a>
+
+                <p class="text-zinc-500 text-sm mt-6">$25 one-time payment • Immediate access • Fully private</p>
             </div>
-            
-            <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl">
-                <div class="flex flex-col items-center">
-                    <div class="rounded-full bg-green-100 w-16 h-16 flex items-center justify-center mb-4">
-                        <i class="fas fa-bolt text-green-500 text-2xl"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 mb-2">Quick & Easy</h3>
-                    <p class="text-center text-gray-600">Less than 2 minutes to freedom</p>
-                </div>
-                
-                <div class="flex flex-col items-center">
-                    <div class="rounded-full bg-blue-100 w-16 h-16 flex items-center justify-center mb-4">
-                        <i class="fas fa-print text-blue-500 text-2xl"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 mb-2">Print Ready</h3>
-                    <p class="text-center text-gray-600">Professional-looking document</p>
-                </div>
-                
-                <div class="flex flex-col items-center">
-                    <div class="rounded-full bg-purple-100 w-16 h-16 flex items-center justify-center mb-4">
-                        <i class="fas fa-lock text-purple-500 text-2xl"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 mb-2">Private & Secure</h3>
-                    <p class="text-center text-gray-600">All data stays in your browser</p>
+
+            <!-- Right Side - Couple Image with Logo Overlay -->
+            <div class="flex-1 flex justify-center">
+                <div class="relative">
+                    <img src="image.jpg" 
+                         alt="Happy couple relaxing at home" 
+                         class="rounded-3xl shadow-2xl w-full max-w-md lg:max-w-lg object-cover">
                 </div>
             </div>
         </div>
     </div>
+</div>
+    <!-- Benefits Section (unchanged) -->
+    <div class="max-w-6xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="bg-white rounded-3xl p-8 shadow hover:shadow-md transition-all text-center">
+                <div class="mx-auto w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-4xl mb-6">🛏️</div>
+                <h3 class="font-semibold text-xl mb-2">Rest Up</h3>
+                <p class="text-zinc-600">Take a moment to recover properly</p>
+            </div>
+            <div class="bg-white rounded-3xl p-8 shadow hover:shadow-md transition-all text-center">
+                <div class="mx-auto w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center text-4xl mb-6">📺</div>
+                <h3 class="font-semibold text-xl mb-2">Binge Watch</h3>
+                <p class="text-zinc-600">Enjoy a quiet day while you rest</p>
+            </div>
+            <div class="bg-white rounded-3xl p-8 shadow hover:shadow-md transition-all text-center">
+                <div class="mx-auto w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center text-4xl mb-6">🧘</div>
+                <h3 class="font-semibold text-xl mb-2">Selfcare</h3>
+                <p class="text-zinc-600">Prioritise your wellbeing today</p>
+            </div>
+            <div class="bg-white rounded-3xl p-8 shadow hover:shadow-md transition-all text-center">
+                <div class="mx-auto w-16 h-16 bg-amber-100 rounded-2xl flex items-center justify-center text-4xl mb-6">🌿</div>
+                <h3 class="font-semibold text-xl mb-2">Touch Grass</h3>
+                <p class="text-zinc-600">Step outside for a brief reset</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3 Easy Steps Section (unchanged) -->
+    <div class="bg-gradient-to-br from-indigo-600 to-blue-700 text-white py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-5">
+                    <img src="https://picsum.photos/id/1015/620/520" alt="Peaceful landscape" 
+                         class="rounded-3xl shadow-2xl w-full object-cover">
+                </div>
+                <div class="md:col-span-7">
+                    <h2 class="text-4xl font-bold mb-4">Freedom in 3 Easy Steps</h2>
+                    <p class="text-indigo-100 text-lg mb-12 max-w-lg">
+                        Our service helps you generate a clean, professional medical certificate for work or personal records — quickly and privately.
+                    </p>
+                    
+                    <div class="space-y-12">
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0 bg-white/20 w-11 h-11 rounded-2xl flex items-center justify-center text-2xl font-bold">1</div>
+                            <div>
+                                <h4 class="font-semibold text-xl mb-2">Click "Generate"</h4>
+                                <p class="text-indigo-100">No accounts. No waiting rooms. No unnecessary steps.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0 bg-white/20 w-11 h-11 rounded-2xl flex items-center justify-center text-2xl font-bold">2</div>
+                            <div>
+                                <h4 class="font-semibold text-xl mb-2">Document Prepared Instantly</h4>
+                                <p class="text-indigo-100">Receive a professionally structured medical certificate suitable for workplace submission.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0 bg-white/20 w-11 h-11 rounded-2xl flex items-center justify-center text-2xl font-bold">3</div>
+                            <div>
+                                <h4 class="font-semibold text-xl mb-2">Download or Print</h4>
+                                <p class="text-indigo-100">Use digitally or in printed form as required.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final CTA Section (unchanged) -->
+    <div class="max-w-6xl mx-auto px-6 py-20 text-center">
+        <div class="max-w-2xl mx-auto">
+            <p class="text-zinc-600 text-lg mb-8">
+                Whether you're feeling unwell, run down, or experiencing mental or physical fatigue, 
+                taking time to rest can be an important part of recovery.
+            </p>
+            
+            <div class="flex items-center justify-center gap-3 mb-10">
+                <span class="text-4xl">❤️</span>
+                <span class="font-semibold text-3xl text-zinc-800">Because Your Health Matters</span>
+            </div>
+            
+            <a href="https://buy.stripe.com/dRm5kDbFngKq9GIfz7gw00O"
+               class="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold text-2xl px-16 py-7 rounded-3xl shadow-2xl transition-all hover:shadow-3xl">
+                Pay $24.67 & Generate
+            </a>
+        </div>
+        
+        <p class="text-zinc-500 text-sm mt-16 max-w-md mx-auto">
+            This service does not replace medical advice. If you are experiencing ongoing or serious health issues, 
+            please consult a healthcare professional.
+        </p>
+    </div>
+
+<!-- Mini Test Button -->
+<button onclick="skipToGenerator()" 
+        class="mt-4 inline-flex items-center justify-center bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium text-sm px-6 py-3 rounded-xl transition-all">
+    <i class="fas fa-flask mr-2"></i>
+    Test Generate (Skip Payment)
+</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     <!-- Generator section (hidden by default) -->
     <div id="generator" class="hidden">
@@ -191,6 +303,15 @@
     </div>
     
     <script>
+
+        function skipToGenerator() {
+            document.getElementById('landing').classList.add('hidden');
+            document.getElementById('generator').classList.remove('hidden');
+        
+            // Optional: Scroll to top of generator
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
         // Set today's date as default when the page loads
         window.onload = function() {
             const today = new Date();
