@@ -229,9 +229,21 @@
 
 
 
+
         
         <!-- Generator section (hidden by default) -->
         <div id="generator" class="hidden">
+        <div id="payment-success" class="hidden mb-6 p-4 rounded-xl bg-green-50 border border-green-200 text-green-800 text-center">
+    
+    <div class="flex flex-col items-center justify-center gap-2">
+        
+        <p class="font-semibold">✅   Payment confirmed</p>
+        <p class="text-sm text-green-700">
+            Fill in your details below to generate your certificate.
+        </p>
+    </div>
+
+</div>
             <div class="container mx-auto p-6 max-w-4xl">
                 <button id="back-to-landing" class="mb-6 inline-flex items-center text-blue-600 hover:text-blue-800">
                     <i class="fas fa-arrow-left mr-2"></i> Back
@@ -372,6 +384,14 @@
     if (isPaidSuccess) {
         const landing = document.getElementById('landing');
         if (landing) landing.remove();
+
+        const successBanner = document.getElementById('payment-success');
+        if (successBanner) {
+        successBanner.classList.remove('hidden');
+        }
+
+        const backBtn = document.getElementById('back-to-landing');
+        if (backBtn) backBtn.remove();
 
         const generator = document.getElementById('generator');
         generator.classList.remove('hidden');
