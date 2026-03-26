@@ -327,7 +327,7 @@
         </div>
     </div>
     
-    <script>
+  <script>
 
         function skipToGenerator() {
             document.getElementById('landing').classList.add('hidden');
@@ -337,7 +337,7 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Set today's date as default when the page loads
+        // Set today's date as default when the page loads + check for successful payment
         window.onload = function() {
             const today = new Date();
             const formattedDate = today.toISOString().substr(0, 10);
@@ -348,6 +348,14 @@
             const tomorrow = new Date();
             tomorrow.setDate(today.getDate() + 1);
             document.getElementById('leave-end').value = tomorrow.toISOString().substr(0, 10);
+
+            // NEW: Auto-show generator only if payment was successful
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('paid') === 'success') {
+                document.getElementById('landing').classList.add('hidden');
+                document.getElementById('generator').classList.remove('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
             
             // Add event listeners
             attachEventListeners();
@@ -658,107 +666,27 @@
         clone.remove();
     }
 }
-// Robust downloadPDF that attempts to inline images (data URLs) to avoid tainted canvases.
-// If it cannot inline an image due to CORS, it removes that image before rendering.
-async function downloadPDF() {
-  const certEl = document.getElementById('printable-certificate');
-  if (!certEl) {
-    alert('Please generate the certificate first.');
-    return;
-  }
-
-  // Clone the element so we can safely mutate for rendering
-  const clone = certEl.cloneNode(true);
-  clone.style.boxShadow = 'none';
-  clone.style.background = window.getComputedStyle(certEl).background || '#fff';
-  clone.querySelectorAll('.no-export').forEach(n => n.remove());
-  clone.style.position = 'fixed';
-  clone.style.left = '-9999px';
-  document.body.appendChild(clone);
-
-  // Helper: fetch image -> dataURL. Will fail if CORS disallows it.
-  async function fetchImageAsDataUrl(url) {
-    const resp = await fetch(url, { mode: 'cors' });
-    if (!resp.ok) throw new Error('Fetch failed: ' + resp.status);
-    const blob = await resp.blob();
-    return await new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onloadend = () => resolve(reader.result);
-      reader.onerror = reject;
-      reader.readAsDataURL(blob);
-    });
-  }
-
-  // Try to inline each image. If inlining fails (CORS), remove the image node.
-  const imgs = Array.from(clone.querySelectorAll('img'));
-  await Promise.all(imgs.map(async img => {
-    try {
-      // Try a gentle approach first: set crossOrigin and reload to encourage CORS-friendly fetch
-      // (Useful if server supports CORS but original tag didn't have crossorigin attribute)
-      try {
-        img.crossOrigin = 'anonymous';
-        // Force reload to attempt a CORS-enabled fetch (cache-busting)
-        const originalSrc = img.src;
-        img.src = originalSrc + (originalSrc.includes('?') ? '&' : '?') + 'inlinecache=' + Date.now();
-        // small delay to allow browser to start re-requesting; not guaranteed but okay
-        await new Promise(r => setTimeout(r, 80));
-      } catch (e) { /* ignore */ }
-
-      // Attempt to fetch and convert to data URL
-      const dataUrl = await fetchImageAsDataUrl(img.src);
-      img.src = dataUrl; // replace with same-origin data URL
-      img.removeAttribute('crossOrigin');
-    } catch (err) {
-      // IMAGE CANNOT BE INLINED (likely CORS). Remove it to avoid tainting the canvas.
-      console.warn('Could not inline image, removing it to avoid taint:', img.src, err && err.message);
-      img.remove();
-    }
-  }));
-
-  try {
-    // Render to canvas with useCORS: true; allowTaint should remain false for export safety
-    const canvas = await html2canvas(clone, { scale: 2, useCORS: true, allowTaint: false, backgroundColor: null });
-
-    const { jsPDF } = window.jspdf;
-    const pdf = new jsPDF('p', 'mm', 'a4');
-    const pageWidth = pdf.internal.pageSize.getWidth();
-    const pageHeight = pdf.internal.pageSize.getHeight();
-    const imgWidth = pageWidth;
-    const imgHeight = (canvas.height * imgWidth) / canvas.width;
-
-    if (imgHeight <= pageHeight) {
-      const imgData = canvas.toDataURL('image/png');
-      pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
-    } else {
-      // Multi-page slicing
-      const pageHeightPx = Math.floor(canvas.width * (pageHeight / pageWidth));
-      let y = 0;
-      while (y < canvas.height) {
-        const pageCanvas = document.createElement('canvas');
-        pageCanvas.width = canvas.width;
-        pageCanvas.height = Math.min(pageHeightPx, canvas.height - y);
-        const ctx = pageCanvas.getContext('2d');
-        ctx.drawImage(canvas, 0, y, canvas.width, pageCanvas.height, 0, 0, canvas.width, pageCanvas.height);
-
-        const pageImgData = pageCanvas.toDataURL('image/png');
-        const pageImgHeight = (pageCanvas.height * imgWidth) / pageCanvas.width;
-        pdf.addImage(pageImgData, 'PNG', 0, 0, imgWidth, pageImgHeight);
-
-        y += pageHeightPx;
-        if (y < canvas.height) pdf.addPage();
-      }
-    }
-
-    pdf.save('certificate.pdf');
-  } catch (err) {
-    console.error('PDF creation error (final):', err);
-    alert('Failed to create PDF: ' + (err && err.message ? err.message : err));
-  } finally {
-    clone.remove();
-  }
-}
 
     </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <style>
    @media print {
