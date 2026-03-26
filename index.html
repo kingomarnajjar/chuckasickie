@@ -1,685 +1,686 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Medical Certificate | Fast, Simple & Secure</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-        body { font-family: 'Inter', system_ui, sans-serif; }
-    </style>
-</head>
-<body class="bg-zinc-50 min-h-screen">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Online Medical Certificate | Fast, Simple & Secure</title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+            body { font-family: 'Inter', system_ui, sans-serif; }
+        </style>
+    </head>
+    <body class="bg-zinc-50 min-h-screen">
 
-<!-- Hero Section -->
-<div id="landing" class="bg-white">
-    <div class="max-w-6xl mx-auto px-6 py-20">
-        
-        <!-- Brand Name + Logo (Top Center) -->
-        <div class="flex flex-col items-center mb-12">
-            <img src="hi-five.png" 
-                 alt="Chuck A Sickie" 
-                 class="h-20 w-auto mb-3">
-            <h2 class="text-2xl font-semibold text-zinc-800 tracking-tight">
-                Chuck A Sickie
-            </h2>
-        </div>
+<div id="landing">
+    <!-- Hero Section -->
+    <div class="bg-white">
+        <div class="max-w-6xl mx-auto px-6 py-20">
+            
+            <!-- Brand Name + Logo (Top Center) -->
+            <div class="flex flex-col items-center mb-12">
+                <img src="hi-five.png" 
+                    alt="Chuck A Sickie" 
+                    class="h-20 w-auto mb-3">
+                <h2 class="text-2xl font-semibold text-zinc-800 tracking-tight">
+                    Chuck A Sickie
+                </h2>
+            </div>
 
-        <div class="flex flex-col lg:flex-row gap-16 items-center">
-            <!-- Left Content -->
-            <div class="flex-1">
-                <div class="flex items-center gap-2 text-orange-600 font-medium mb-6">
-                    <i class="fas fa-clock"></i>
-                    <span>Reclaim Your Day</span>
-                </div>
-                
-                <h1 class="text-5xl lg:text-6xl font-bold text-zinc-900 leading-none tracking-tighter mb-4">
-                    Online Medical Certificate
-                </h1>
-                <p class="text-3xl text-zinc-700 font-medium mb-8">Fast, Simple & Secure</p>
-                
-                <p class="text-lg text-zinc-600 max-w-md mb-10">
-                    Get a professionally formatted medical certificate online whenever you need time off to rest and recover. 
-                    Ideal for short-term personal leave due to illness, fatigue, or health-related reasons.
-                </p>
-
-                <!-- Trust Badges -->
-                <div class="flex flex-wrap gap-x-8 gap-y-3 text-sm mb-12">
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-check-circle text-emerald-500"></i>
-                        <span class="font-medium">Under 2 minutes</span>
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <!-- Left Content -->
+                <div class="flex-1">
+                    <div class="flex items-center gap-2 text-orange-600 font-medium mb-6">
+                        <i class="fas fa-clock"></i>
+                        <span>Reclaim Your Day</span>
                     </div>
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-check-circle text-emerald-500"></i>
-                        <span class="font-medium">Private & Secure</span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-check-circle text-emerald-500"></i>
-                        <span class="font-medium">Instant delivery</span>
-                    </div>
-                </div>
-
-                <!-- Primary CTA -->
-                <a href="https://buy.stripe.com/dRm5kDbFngKq9GIfz7gw00O"
-                   class="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-semibold text-xl px-12 py-5 rounded-2xl shadow-xl transition-all hover:shadow-2xl hover:-translate-y-0.5 w-full lg:w-auto">
-                    <i class="fas fa-credit-card mr-3"></i>
-                    Generate your Medical Certificate Now
-                </a>
-
-                <p class="text-zinc-500 text-sm mt-6">$25 one-time payment • Immediate access • Fully private</p>
-            </div>
-
-            <!-- Right Side - Couple Image with Logo Overlay -->
-            <div class="flex-1 flex justify-center">
-                <div class="relative">
-                    <img src="image.jpg" 
-                         alt="Happy couple relaxing at home" 
-                         class="rounded-3xl shadow-2xl w-full max-w-md lg:max-w-lg object-cover">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Benefits Section with Mascot Images -->
-<div class="max-w-6xl mx-auto px-6 py-16">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        
-        <!-- Rest Up -->
-        <div class="bg-white rounded-3xl p-8 shadow hover:shadow-md transition-all text-center">
-            <div class="mx-auto w-28 h-28 flex items-center justify-center mb-6">
-                <img src="koala-sleeping-transparent.png" 
-                     alt="Koala resting" 
-                     class="w-28 h-28 object-contain">
-            </div>
-            <h3 class="font-semibold text-xl mb-2">Rest Up</h3>
-            <p class="text-zinc-600">Take a moment to recover properly</p>
-        </div>
-
-        <!-- Binge Watch -->
-        <div class="bg-white rounded-3xl p-8 shadow hover:shadow-md transition-all text-center">
-            <div class="mx-auto w-28 h-28 flex items-center justify-center mb-6">
-                <img src="koala-kangaroo-binge-watching-tv-transparent.png" 
-                     alt="Kangaroo and Koala binge watching" 
-                     class="w-28 h-28 object-contain">
-            </div>
-            <h3 class="font-semibold text-xl mb-2">Binge Watch</h3>
-            <p class="text-zinc-600">Enjoy a quiet day while you rest</p>
-        </div>
-
-        <!-- Selfcare -->
-        <div class="bg-white rounded-3xl p-8 shadow hover:shadow-md transition-all text-center">
-            <div class="mx-auto w-28 h-28 flex items-center justify-center mb-6">
-                <img src="meditating-koala-transparent.png" 
-                     alt="Koala meditating" 
-                     class="w-28 h-28 object-contain">
-            </div>
-            <h3 class="font-semibold text-xl mb-2">Selfcare</h3>
-            <p class="text-zinc-600">Prioritise your wellbeing today</p>
-        </div>
-
-        <!-- Touch Grass -->
-        <div class="bg-white rounded-3xl p-8 shadow hover:shadow-md transition-all text-center">
-            <div class="mx-auto w-28 h-28 flex items-center justify-center mb-6">
-                <img src="koala-kangaroo-grass.jpg" 
-                     alt="Kangaroo and Koala touching grass" 
-                     class="w-28 h-28 object-contain">
-            </div>
-            <h3 class="font-semibold text-xl mb-2">Touch Grass</h3>
-            <p class="text-zinc-600">Step outside for a brief reset</p>
-        </div>
-        
-    </div>
-</div>
-
-    <!-- 3 Easy Steps Section (unchanged) -->
-    <div class="bg-gradient-to-br from-indigo-600 to-blue-700 text-white py-20">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="grid md:grid-cols-12 gap-12 items-center">
-                <div class="md:col-span-5">
-                    <img src="https://picsum.photos/id/1015/620/520" alt="Peaceful landscape" 
-                         class="rounded-3xl shadow-2xl w-full object-cover">
-                </div>
-                <div class="md:col-span-7">
-                    <h2 class="text-4xl font-bold mb-4">Freedom in 3 Easy Steps</h2>
-                    <p class="text-indigo-100 text-lg mb-12 max-w-lg">
-                        Our service helps you generate a clean, professional medical certificate for work or personal records — quickly and privately.
+                    
+                    <h1 class="text-5xl lg:text-6xl font-bold text-zinc-900 leading-none tracking-tighter mb-4">
+                        Online Medical Certificate
+                    </h1>
+                    <p class="text-3xl text-zinc-700 font-medium mb-8">Fast, Simple & Secure</p>
+                    
+                    <p class="text-lg text-zinc-600 max-w-md mb-10">
+                        Get a professionally formatted medical certificate online whenever you need time off to rest and recover. 
+                        Ideal for short-term personal leave due to illness, fatigue, or health-related reasons.
                     </p>
-                    
-                    <div class="space-y-12">
-                        <div class="flex gap-6">
-                            <div class="flex-shrink-0 bg-white/20 w-11 h-11 rounded-2xl flex items-center justify-center text-2xl font-bold">1</div>
-                            <div>
-                                <h4 class="font-semibold text-xl mb-2">Click "Generate"</h4>
-                                <p class="text-indigo-100">No accounts. No waiting rooms. No unnecessary steps.</p>
-                            </div>
+
+                    <!-- Trust Badges -->
+                    <div class="flex flex-wrap gap-x-8 gap-y-3 text-sm mb-12">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check-circle text-emerald-500"></i>
+                            <span class="font-medium">Under 2 minutes</span>
                         </div>
-                        <div class="flex gap-6">
-                            <div class="flex-shrink-0 bg-white/20 w-11 h-11 rounded-2xl flex items-center justify-center text-2xl font-bold">2</div>
-                            <div>
-                                <h4 class="font-semibold text-xl mb-2">Document Prepared Instantly</h4>
-                                <p class="text-indigo-100">Receive a professionally structured medical certificate suitable for workplace submission.</p>
-                            </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check-circle text-emerald-500"></i>
+                            <span class="font-medium">Private & Secure</span>
                         </div>
-                        <div class="flex gap-6">
-                            <div class="flex-shrink-0 bg-white/20 w-11 h-11 rounded-2xl flex items-center justify-center text-2xl font-bold">3</div>
-                            <div>
-                                <h4 class="font-semibold text-xl mb-2">Download or Print</h4>
-                                <p class="text-indigo-100">Use digitally or in printed form as required.</p>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check-circle text-emerald-500"></i>
+                            <span class="font-medium">Instant delivery</span>
+                        </div>
+                    </div>
+
+                    <!-- Primary CTA -->
+                    <a href="https://buy.stripe.com/dRm5kDbFngKq9GIfz7gw00O"
+                    class="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-semibold text-xl px-12 py-5 rounded-2xl shadow-xl transition-all hover:shadow-2xl hover:-translate-y-0.5 w-full lg:w-auto">
+                        <i class="fas fa-credit-card mr-3"></i>
+                        Generate your Medical Certificate Now
+                    </a>
+
+                    <p class="text-zinc-500 text-sm mt-6">$25 one-time payment • Immediate access • Fully private</p>
+                </div>
+
+                <!-- Right Side - Couple Image with Logo Overlay -->
+                <div class="flex-1 flex justify-center">
+                    <div class="relative">
+                        <img src="image.jpg" 
+                            alt="Happy couple relaxing at home" 
+                            class="rounded-3xl shadow-2xl w-full max-w-md lg:max-w-lg object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Benefits Section with Mascot Images -->
+    <div class="max-w-6xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            
+            <!-- Rest Up -->
+            <div class="bg-white rounded-3xl p-8 shadow hover:shadow-md transition-all text-center">
+                <div class="mx-auto w-28 h-28 flex items-center justify-center mb-6">
+                    <img src="koala-sleeping-transparent.png" 
+                        alt="Koala resting" 
+                        class="w-28 h-28 object-contain">
+                </div>
+                <h3 class="font-semibold text-xl mb-2">Rest Up</h3>
+                <p class="text-zinc-600">Take a moment to recover properly</p>
+            </div>
+
+            <!-- Binge Watch -->
+            <div class="bg-white rounded-3xl p-8 shadow hover:shadow-md transition-all text-center">
+                <div class="mx-auto w-28 h-28 flex items-center justify-center mb-6">
+                    <img src="koala-kangaroo-binge-watching-tv-transparent.png" 
+                        alt="Kangaroo and Koala binge watching" 
+                        class="w-28 h-28 object-contain">
+                </div>
+                <h3 class="font-semibold text-xl mb-2">Binge Watch</h3>
+                <p class="text-zinc-600">Enjoy a quiet day while you rest</p>
+            </div>
+
+            <!-- Selfcare -->
+            <div class="bg-white rounded-3xl p-8 shadow hover:shadow-md transition-all text-center">
+                <div class="mx-auto w-28 h-28 flex items-center justify-center mb-6">
+                    <img src="meditating-koala-transparent.png" 
+                        alt="Koala meditating" 
+                        class="w-28 h-28 object-contain">
+                </div>
+                <h3 class="font-semibold text-xl mb-2">Selfcare</h3>
+                <p class="text-zinc-600">Prioritise your wellbeing today</p>
+            </div>
+
+            <!-- Touch Grass -->
+            <div class="bg-white rounded-3xl p-8 shadow hover:shadow-md transition-all text-center">
+                <div class="mx-auto w-28 h-28 flex items-center justify-center mb-6">
+                    <img src="koala-kangaroo-grass.jpg" 
+                        alt="Kangaroo and Koala touching grass" 
+                        class="w-28 h-28 object-contain">
+                </div>
+                <h3 class="font-semibold text-xl mb-2">Touch Grass</h3>
+                <p class="text-zinc-600">Step outside for a brief reset</p>
+            </div>
+            
+        </div>
+    </div>
+
+        <!-- 3 Easy Steps Section (unchanged) -->
+        <div class="bg-gradient-to-br from-indigo-600 to-blue-700 text-white py-20">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid md:grid-cols-12 gap-12 items-center">
+                    <div class="md:col-span-5">
+                        <img src="https://picsum.photos/id/1015/620/520" alt="Peaceful landscape" 
+                            class="rounded-3xl shadow-2xl w-full object-cover">
+                    </div>
+                    <div class="md:col-span-7">
+                        <h2 class="text-4xl font-bold mb-4">Freedom in 3 Easy Steps</h2>
+                        <p class="text-indigo-100 text-lg mb-12 max-w-lg">
+                            Our service helps you generate a clean, professional medical certificate for work or personal records — quickly and privately.
+                        </p>
+                        
+                        <div class="space-y-12">
+                            <div class="flex gap-6">
+                                <div class="flex-shrink-0 bg-white/20 w-11 h-11 rounded-2xl flex items-center justify-center text-2xl font-bold">1</div>
+                                <div>
+                                    <h4 class="font-semibold text-xl mb-2">Click "Generate"</h4>
+                                    <p class="text-indigo-100">No accounts. No waiting rooms. No unnecessary steps.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6">
+                                <div class="flex-shrink-0 bg-white/20 w-11 h-11 rounded-2xl flex items-center justify-center text-2xl font-bold">2</div>
+                                <div>
+                                    <h4 class="font-semibold text-xl mb-2">Document Prepared Instantly</h4>
+                                    <p class="text-indigo-100">Receive a professionally structured medical certificate suitable for workplace submission.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6">
+                                <div class="flex-shrink-0 bg-white/20 w-11 h-11 rounded-2xl flex items-center justify-center text-2xl font-bold">3</div>
+                                <div>
+                                    <h4 class="font-semibold text-xl mb-2">Download or Print</h4>
+                                    <p class="text-indigo-100">Use digitally or in printed form as required.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Final CTA Section (unchanged) -->
-    <div class="max-w-6xl mx-auto px-6 py-20 text-center">
-        <div class="max-w-2xl mx-auto">
-            <p class="text-zinc-600 text-lg mb-8">
-                Whether you're feeling unwell, run down, or experiencing mental or physical fatigue, 
-                taking time to rest can be an important part of recovery.
+        <!-- Final CTA Section (unchanged) -->
+        <div class="max-w-6xl mx-auto px-6 py-20 text-center">
+            <div class="max-w-2xl mx-auto">
+                <p class="text-zinc-600 text-lg mb-8">
+                    Whether you're feeling unwell, run down, or experiencing mental or physical fatigue, 
+                    taking time to rest can be an important part of recovery.
+                </p>
+                
+                <div class="flex items-center justify-center gap-3 mb-10">
+                    <span class="text-4xl">❤️</span>
+                    <span class="font-semibold text-3xl text-zinc-800">Because Your Health Matters</span>
+                </div>
+                
+                <a href="https://buy.stripe.com/dRm5kDbFngKq9GIfz7gw00O"
+                class="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold text-2xl px-16 py-7 rounded-3xl shadow-2xl transition-all hover:shadow-3xl">
+                    Pay $24.67 & Generate
+                </a>
+            </div>
+            
+            <p class="text-zinc-500 text-sm mt-16 max-w-md mx-auto">
+                This service does not replace medical advice. If you are experiencing ongoing or serious health issues, 
+                please consult a healthcare professional.
             </p>
-            
-            <div class="flex items-center justify-center gap-3 mb-10">
-                <span class="text-4xl">❤️</span>
-                <span class="font-semibold text-3xl text-zinc-800">Because Your Health Matters</span>
-            </div>
-            
-            <a href="https://buy.stripe.com/dRm5kDbFngKq9GIfz7gw00O"
-               class="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold text-2xl px-16 py-7 rounded-3xl shadow-2xl transition-all hover:shadow-3xl">
-                Pay $24.67 & Generate
-            </a>
         </div>
-        
-        <p class="text-zinc-500 text-sm mt-16 max-w-md mx-auto">
-            This service does not replace medical advice. If you are experiencing ongoing or serious health issues, 
-            please consult a healthcare professional.
-        </p>
-    </div>
-
-<!-- Mini Test Button -->
-<button onclick="skipToGenerator()" 
-        class="mt-4 inline-flex items-center justify-center bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium text-sm px-6 py-3 rounded-xl transition-all">
-    <i class="fas fa-flask mr-2"></i>
-    Test Generate (Skip Payment)
-</button>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    <!-- Generator section (hidden by default) -->
-    <div id="generator" class="hidden">
-        <div class="container mx-auto p-6 max-w-4xl">
-            <button id="back-to-landing" class="mb-6 inline-flex items-center text-blue-600 hover:text-blue-800">
-                <i class="fas fa-arrow-left mr-2"></i> Back
-            </button>
-            
-            <div class="bg-white rounded-lg shadow-md p-8 mb-8">
-                <h1 class="text-3xl font-bold text-gray-800 mb-6">Chuck a Sickie - Medical Certificate Generator</h1>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="form-group">
-                        <label for="pharmacy-name" class="block text-sm font-medium text-gray-700 mb-1">Pharmacy Name:</label>
-                        <input type="text" id="pharmacy-name" value="PRICELINE PHARMACY ROSELANDS" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="pharmacy-address1" class="block text-sm font-medium text-gray-700 mb-1">Address Line 1:</label>
-                        <input type="text" id="pharmacy-address1" value="SHOP L25, LOWER GROUND," class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="pharmacy-address2" class="block text-sm font-medium text-gray-700 mb-1">Address Line 2:</label>
-                        <input type="text" id="pharmacy-address2" value="ROSELANDS SHOPPING CENTRE" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="pharmacy-address3" class="block text-sm font-medium text-gray-700 mb-1">Address Line 3:</label>
-                        <input type="text" id="pharmacy-address3" value="ROSELANDS DRIVE" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="pharmacy-address4" class="block text-sm font-medium text-gray-700 mb-1">Address Line 4:</label>
-                        <input type="text" id="pharmacy-address4" value="ROSELANDS" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="pharmacy-postcode" class="block text-sm font-medium text-gray-700 mb-1">State & Postcode:</label>
-                        <input type="text" id="pharmacy-postcode" value="NSW 2196" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="pharmacy-phone" class="block text-sm font-medium text-gray-700 mb-1">Phone:</label>
-                        <input type="text" id="pharmacy-phone" value="02 9759 1444" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="pharmacy-fax" class="block text-sm font-medium text-gray-700 mb-1">Fax:</label>
-                        <input type="text" id="pharmacy-fax" value="02 9759 9205" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="pharmacy-email" class="block text-sm font-medium text-gray-700 mb-1">Email:</label>
-                        <input type="text" id="pharmacy-email" value="priosmanagement@gmail.com" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="patient-name" class="block text-sm font-medium text-gray-700 mb-1">Patient Name:</label>
-                        <input type="text" id="patient-name" value="MOEY DONTWORRY" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="patient-address" class="block text-sm font-medium text-gray-700 mb-1">Patient Address:</label>
-                        <input type="text" id="patient-address" value="1 PEEKABOO AVE, WONDERLAND NSW 2196" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="cert-date" class="block text-sm font-medium text-gray-700 mb-1">Certificate Date:</label>
-                        <input type="date" id="cert-date" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="leave-start" class="block text-sm font-medium text-gray-700 mb-1">Leave Start Date:</label>
-                        <input type="date" id="leave-start" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="leave-end" class="block text-sm font-medium text-gray-700 mb-1">Leave End Date:</label>
-                        <input type="date" id="leave-end" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="pharmacist-name" class="block text-sm font-medium text-gray-700 mb-1">Pharmacist Name:</label>
-                        <input type="text" id="pharmacist-name" value="JASON DEMYANE" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="registration-no" class="block text-sm font-medium text-gray-700 mb-1">Registration Number:</label>
-                        <input type="text" id="registration-no" value="PHA0002242371" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                    </div>
-                </div>
-                
-                <button onclick="generateCertificate()" class="mt-6 bg-gradient-to-r from-green-500 to-green-600 text-white py-2 px-6 rounded-md hover:from-green-600 hover:to-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transform transition hover:scale-105 font-medium">Generate Certificate</button>
-            </div>
-            
-            <div id="certificate-container"></div>
-        </div>
-    </div>
-    
-  <script>
-
-
-        function skipToGenerator() {
-            document.getElementById('landing').classList.add('hidden');
-            document.getElementById('generator').classList.remove('hidden');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        // Stronger version - completely removes landing after successful payment
-        window.onload = function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const isPaidSuccess = urlParams.get('paid') === 'success';
-
-            // Set default dates
-            const today = new Date();
-            const formattedDate = today.toISOString().substr(0, 10);
-            document.getElementById('cert-date').value = formattedDate;
-            document.getElementById('leave-start').value = formattedDate;
-            
-            const tomorrow = new Date();
-            tomorrow.setDate(today.getDate() + 1);
-            document.getElementById('leave-end').value = tomorrow.toISOString().substr(0, 10);
-
-            if (isPaidSuccess) {
-                // Completely remove the entire landing section from the page
-                const landing = document.getElementById('landing');
-                if (landing) {
-                    landing.remove();   // This deletes it entirely (no hidden elements left)
-                }
-
-                // Show the generator cleanly
-                const generator = document.getElementById('generator');
-                generator.classList.remove('hidden');
-                generator.style.marginTop = '0px';
-                generator.style.paddingTop = '20px';
-
-                // Force clean scroll to top
-                window.scrollTo({ top: 0, behavior: 'instant' });
-            }
-
-            // Normal visit (no ?paid=success) → landing stays visible
-            attachEventListeners();
-        };
-        
-        function formatDate(dateString) {
-            const date = new Date(dateString);
-            const day = String(date.getDate()).padStart(2, '0');
-            const month = String(date.getMonth() + 1).padStart(2, '0');
-            const year = date.getFullYear();
-            return `${day}/${month}/${year}`;
-        }
-        
-        function generateCertificate() {
-            // Get all form values
-            const pharmacyName = document.getElementById('pharmacy-name').value;
-            const pharmacyAddress1 = document.getElementById('pharmacy-address1').value;
-            const pharmacyAddress2 = document.getElementById('pharmacy-address2').value;
-            const pharmacyAddress3 = document.getElementById('pharmacy-address3').value;
-            const pharmacyAddress4 = document.getElementById('pharmacy-address4').value;
-            const pharmacyPostcode = document.getElementById('pharmacy-postcode').value;
-            const pharmacyPhone = document.getElementById('pharmacy-phone').value;
-            const pharmacyFax = document.getElementById('pharmacy-fax').value;
-            const pharmacyEmail = document.getElementById('pharmacy-email').value;
-            
-            const patientName = document.getElementById('patient-name').value;
-            const patientAddress = document.getElementById('patient-address').value;
-            
-            const certDate = document.getElementById('cert-date').value;
-            const leaveStart = document.getElementById('leave-start').value;
-            const leaveEnd = document.getElementById('leave-end').value;
-            
-            const pharmacistName = document.getElementById('pharmacist-name').value;
-            const registrationNo = document.getElementById('registration-no').value;
-            
-            // Format dates for display
-            const formattedCertDate = formatDate(certDate);
-            const formattedLeaveStart = formatDate(leaveStart);
-            const formattedLeaveEnd = formatDate(leaveEnd);
-            
-            // Create the certificate HTML with Tailwind classes
-            const certificateHTML = `
-   <div
-  id="printable-certificate"
-  class="certificate-wrapper bg-white rounded-lg shadow-lg p-6 mb-8 max-w-4xl mx-auto print:bg-transparent print:shadow-none print:rounded-none print:p-0 print:m-0 print:max-w-full print:w-auto print:mx-0" style="width: 210mm; height: auto; max-height: 280mm;">
-            <div class="flex justify-between items-start mb-8">
-                        <div class="flex items-start">
-                            <div class="pharmacy-logo w-40 text-center mr-4">
-                                <img src="priceline-logo2.webp" alt="Priceline Pharmacy Logo" class="w-full h-auto">
-                            </div>
-                            
-                            <div class="pharmacy-info">
-                                <p class="font-bold uppercase">${pharmacyName}</p>
-                                <p class="uppercase">${pharmacyAddress1}</p>
-                                <p class="uppercase">${pharmacyAddress2}</p>
-                                <p class="uppercase">${pharmacyAddress3}</p>
-                                <p class="uppercase">${pharmacyAddress4}</p>
-                                <p class="uppercase">${pharmacyPostcode}</p>
-                                <p>Phone: ${pharmacyPhone}</p>
-                                <p>Fax: ${pharmacyFax}</p>
-                                <p>Email: ${pharmacyEmail}</p>
-                            </div>
-                        </div>
-                        
-                        <div class="certificate-title text-center border-2 border-gray-800 p-4" style="width: 180px;">
-                            <h2 class="text-xl font-bold">Certificate for<br>Personal Leave</h2>
-                        </div>
-                    </div>
-                    
-                    <div class="certificate-body leading-relaxed text-gray-800 mb-6">
-                        <p class="mb-4">This certificate is to certify that on ${formattedCertDate}</p>
-                        <p class="mb-4"><span class="font-bold">${patientName}</span> of ${patientAddress} presented at this pharmacy.</p>
-                        
-                        <p class="mb-6">In my professional opinion, based on the information provided to me at the time, <span class="font-bold">${patientName}</span> will be unfit to attend work/school for the period commencing ${formattedLeaveStart} to ${formattedLeaveEnd}.</p>
-                                                
-                        <p class="mb-6">This opinion was provided in my capacity as pharmacist for the purpose of informing the employer of the named person that he/she is unfit for work due to illness/injury.</p>
-                        
-                        <div class="signature-section border-t border-gray-300 pt-4 mt-10">
-                            <p class="font-bold mb-2">This certificate was provided by</p>
-                            
-                            <p class="mb-1">Date: ${formattedCertDate}</p>
-                            <p class="mb-4">Pharmacist signature: <strong><em>${pharmacistName}</em></strong></p>
-                            
-                            <p class="mb-1">Name: ${pharmacistName}</p>
-                            <p class="mb-4">Registration no: ${registrationNo}</p>
-                            
-                            <p class="mb-1">In accordance with the evidence requirements under section 107(3) of the Fair Work Act 2009 at</p>
-                            <p class="mb-0">${pharmacyName}, ${pharmacyAddress1}, ${pharmacyAddress2}</p>
-                            <p class="mb-0">${pharmacyAddress3}, ${pharmacyAddress4} ${pharmacyPostcode}</p>
-                            <p class="mb-2">Phone ${pharmacyPhone}</p>
-                        </div>
-                        
-                        <div class="footer-text text-xs leading-snug text-gray-600 mt-10">
-                            <p class="text-[8px]">This Certificate for Leave ("Document") has been developed in electronic format by MedAdvisor International Pty Ltd ("MedAdvisor") based on the Guidelines for pharmacists issuing certificates for absence from work (October 2010) developed by Pharmaceutical Society of Australia and the Pharmacy Guild of Australia (the Guidelines). The Document must be used in accordance with the Guidelines and other relevant industry standards, codes, regulations and laws.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="text-center mb-12">
-    <p class="text-sm text-gray-500 print:hidden">
-        Tip: For a clean certificate, disable headers and footers in your print settings.
-    </p>
-    <br/>
-
-    <button onclick="printCertificate()" class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition transform hover:scale-105 print:hidden mr-4 no-export">
-        <i class="fas fa-print mr-2"></i> Print Certificate
+    <!-- Mini Test Button -->
+    <button onclick="skipToGenerator()" 
+            class="mt-4 inline-flex items-center justify-center bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium text-sm px-6 py-3 rounded-xl transition-all">
+        <i class="fas fa-flask mr-2"></i>
+        Test Generate (Skip Payment)
     </button>
 
-    <!-- NEW: Download as PDF -->
-    <button onclick="downloadPDF()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 transition transform hover:scale-105 print:hidden mr-4 no-export">
-        <i class="fas fa-download mr-2"></i> Download as PDF
-    </button>
-
-    <button onclick="confetti()" class="bg-purple-500 hover:bg-purple-600 text-white font-medium py-2 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 transition transform hover:scale-105 print:hidden no-export">
-        <i class="fas fa-glass-cheers mr-2"></i> Celebrate Your Day Off!
-    </button>
 </div>
-            `;
-            
-            // Display the certificate
-            document.getElementById('certificate-container').innerHTML = certificateHTML;
 
-            // Scroll to the certificate
-            document.getElementById('certificate-container').scrollIntoView({ behavior: 'smooth' });
-        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
-        // Print only the certificate
-        function printCertificate() {
-            const printContent = document.getElementById('printable-certificate');
-            const originalDocument = document.body.innerHTML;
-            
-            // Only print the certificate
-            document.body.innerHTML = printContent.outerHTML;
-            
-            // Print
-            window.print();
-            
-            // Restore original content
-            document.body.innerHTML = originalDocument;
-            
-            // Re-add event listeners after restoring the document
-            setTimeout(() => {
-                attachEventListeners();
-                // Re-select the certificate if it was previously generated
-                const certificate = document.getElementById('printable-certificate');
-                if (certificate) {
-                    certificate.scrollIntoView({ behavior: 'smooth' });
-                }
-            }, 100);
-        }
-        
-        // Attach all event listeners
-        function attachEventListeners() {
-            // Landing page button
-            const showGeneratorBtn = document.getElementById('show-generator');
-            if (showGeneratorBtn) {
-                showGeneratorBtn.addEventListener('click', function() {
-                    document.getElementById('landing').classList.add('hidden');
-                    document.getElementById('generator').classList.remove('hidden');
-                });
-            }
-            
-            // Back button
-            const backToLandingBtn = document.getElementById('back-to-landing');
-            if (backToLandingBtn) {
-                backToLandingBtn.addEventListener('click', function() {
-                    document.getElementById('generator').classList.add('hidden');
-                    document.getElementById('landing').classList.remove('hidden');
-                });
-            }
-            
-            // Generate button
-            const generateCertBtn = document.querySelector('button[onclick="generateCertificate()"]');
-            if (generateCertBtn) {
-                generateCertBtn.onclick = generateCertificate;
-            }
-            
-            // Print buttons
-            const printBtns = document.querySelectorAll('button[onclick="printCertificate()"]');
-            printBtns.forEach(btn => {
-                btn.onclick = printCertificate;
-            });
-            
-            // Confetti buttons
-            const confettiBtns = document.querySelectorAll('button[onclick="confetti()"]');
-            confettiBtns.forEach(btn => {
-                btn.onclick = confetti;
-            });
-        }
-        
-        
-        // Simple confetti function
-        function confetti() {
-            const colors = ['#ff718d', '#fdbb2d', '#22c1c3', '#b721ff', '#21d4fd'];
-            const container = document.createElement('div');
-            container.style.position = 'fixed';
-            container.style.top = '0';
-            container.style.left = '0';
-            container.style.width = '100%';
-            container.style.height = '100%';
-            container.style.pointerEvents = 'none';
-            container.style.zIndex = '9999';
-            document.body.appendChild(container);
-            
-            for (let i = 0; i < 200; i++) {
-                setTimeout(() => {
-                    const confetti = document.createElement('div');
-                    confetti.style.position = 'absolute';
-                    confetti.style.width = Math.random() * 10 + 5 + 'px';
-                    confetti.style.height = Math.random() * 10 + 5 + 'px';
-                    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-                    confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
-                    confetti.style.left = Math.random() * 100 + 'vw';
-                    confetti.style.top = '-20px';
-                    confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
-                    container.appendChild(confetti);
+        <!-- Generator section (hidden by default) -->
+        <div id="generator" class="hidden">
+            <div class="container mx-auto p-6 max-w-4xl">
+                <button id="back-to-landing" class="mb-6 inline-flex items-center text-blue-600 hover:text-blue-800">
+                    <i class="fas fa-arrow-left mr-2"></i> Back
+                </button>
+                
+                <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+                    <h1 class="text-3xl font-bold text-gray-800 mb-6">Chuck a Sickie - Medical Certificate Generator</h1>
                     
-                    let speed = Math.random() * 3 + 2;
-                    let rotateSpeed = Math.random() * 5 - 2.5;
-                    let horizontalSpeed = Math.random() * 5 - 2.5;
-                    
-                    const fall = () => {
-                        const top = parseFloat(confetti.style.top);
-                        const left = parseFloat(confetti.style.left);
-                        const rotate = parseFloat(confetti.style.transform.replace('rotate(', '').replace('deg)', ''));
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="form-group">
+                            <label for="pharmacy-name" class="block text-sm font-medium text-gray-700 mb-1">Pharmacy Name:</label>
+                            <input type="text" id="pharmacy-name" value="PRICELINE PHARMACY ROSELANDS" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
                         
-                        if (top < window.innerHeight) {
-                            confetti.style.top = top + speed + 'px';
-                            confetti.style.left = left + horizontalSpeed + 'vw';
-                            confetti.style.transform = `rotate(${rotate + rotateSpeed}deg)`;
-                            requestAnimationFrame(fall);
-                        } else {
-                            confetti.remove();
-                        }
-                    };
+                        <div class="form-group">
+                            <label for="pharmacy-address1" class="block text-sm font-medium text-gray-700 mb-1">Address Line 1:</label>
+                            <input type="text" id="pharmacy-address1" value="SHOP L25, LOWER GROUND," class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="pharmacy-address2" class="block text-sm font-medium text-gray-700 mb-1">Address Line 2:</label>
+                            <input type="text" id="pharmacy-address2" value="ROSELANDS SHOPPING CENTRE" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="pharmacy-address3" class="block text-sm font-medium text-gray-700 mb-1">Address Line 3:</label>
+                            <input type="text" id="pharmacy-address3" value="ROSELANDS DRIVE" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="pharmacy-address4" class="block text-sm font-medium text-gray-700 mb-1">Address Line 4:</label>
+                            <input type="text" id="pharmacy-address4" value="ROSELANDS" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="pharmacy-postcode" class="block text-sm font-medium text-gray-700 mb-1">State & Postcode:</label>
+                            <input type="text" id="pharmacy-postcode" value="NSW 2196" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="pharmacy-phone" class="block text-sm font-medium text-gray-700 mb-1">Phone:</label>
+                            <input type="text" id="pharmacy-phone" value="02 9759 1444" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="pharmacy-fax" class="block text-sm font-medium text-gray-700 mb-1">Fax:</label>
+                            <input type="text" id="pharmacy-fax" value="02 9759 9205" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="pharmacy-email" class="block text-sm font-medium text-gray-700 mb-1">Email:</label>
+                            <input type="text" id="pharmacy-email" value="priosmanagement@gmail.com" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="patient-name" class="block text-sm font-medium text-gray-700 mb-1">Patient Name:</label>
+                            <input type="text" id="patient-name" value="MOEY DONTWORRY" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="patient-address" class="block text-sm font-medium text-gray-700 mb-1">Patient Address:</label>
+                            <input type="text" id="patient-address" value="1 PEEKABOO AVE, WONDERLAND NSW 2196" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cert-date" class="block text-sm font-medium text-gray-700 mb-1">Certificate Date:</label>
+                            <input type="date" id="cert-date" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="leave-start" class="block text-sm font-medium text-gray-700 mb-1">Leave Start Date:</label>
+                            <input type="date" id="leave-start" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="leave-end" class="block text-sm font-medium text-gray-700 mb-1">Leave End Date:</label>
+                            <input type="date" id="leave-end" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="pharmacist-name" class="block text-sm font-medium text-gray-700 mb-1">Pharmacist Name:</label>
+                            <input type="text" id="pharmacist-name" value="JASON DEMYANE" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="registration-no" class="block text-sm font-medium text-gray-700 mb-1">Registration Number:</label>
+                            <input type="text" id="registration-no" value="PHA0002242371" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                    </div>
                     
-                    requestAnimationFrame(fall);
-                }, Math.random() * 1500);
+                    <button onclick="generateCertificate()" class="mt-6 bg-gradient-to-r from-green-500 to-green-600 text-white py-2 px-6 rounded-md hover:from-green-600 hover:to-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transform transition hover:scale-105 font-medium">Generate Certificate</button>
+                </div>
+                
+                <div id="certificate-container"></div>
+            </div>
+        </div>
+        
+    <script>
+
+
+            function skipToGenerator() {
+                document.getElementById('landing').classList.add('hidden');
+                document.getElementById('generator').classList.remove('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            // Stronger version - completely removes landing after successful payment
+            window.onload = function() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const isPaidSuccess = urlParams.get('paid') === 'success';
+
+                // Set default dates
+                const today = new Date();
+                const formattedDate = today.toISOString().substr(0, 10);
+                document.getElementById('cert-date').value = formattedDate;
+                document.getElementById('leave-start').value = formattedDate;
+                
+                const tomorrow = new Date();
+                tomorrow.setDate(today.getDate() + 1);
+                document.getElementById('leave-end').value = tomorrow.toISOString().substr(0, 10);
+
+                if (isPaidSuccess) {
+                    // Completely remove the entire landing section from the page
+                    const landing = document.getElementById('landing');
+                    if (landing) {
+                        landing.remove();   // This deletes it entirely (no hidden elements left)
+                    }
+
+                    // Show the generator cleanly
+                    const generator = document.getElementById('generator');
+                    generator.classList.remove('hidden');
+                    generator.style.marginTop = '0px';
+                    generator.style.paddingTop = '20px';
+
+                    // Force clean scroll to top
+                    window.scrollTo({ top: 0, behavior: 'instant' });
+                }
+
+                // Normal visit (no ?paid=success) → landing stays visible
+                attachEventListeners();
+            };
+            
+            function formatDate(dateString) {
+                const date = new Date(dateString);
+                const day = String(date.getDate()).padStart(2, '0');
+                const month = String(date.getMonth() + 1).padStart(2, '0');
+                const year = date.getFullYear();
+                return `${day}/${month}/${year}`;
             }
             
-            setTimeout(() => {
-                container.remove();
-            }, 10000);
-        }
+            function generateCertificate() {
+                // Get all form values
+                const pharmacyName = document.getElementById('pharmacy-name').value;
+                const pharmacyAddress1 = document.getElementById('pharmacy-address1').value;
+                const pharmacyAddress2 = document.getElementById('pharmacy-address2').value;
+                const pharmacyAddress3 = document.getElementById('pharmacy-address3').value;
+                const pharmacyAddress4 = document.getElementById('pharmacy-address4').value;
+                const pharmacyPostcode = document.getElementById('pharmacy-postcode').value;
+                const pharmacyPhone = document.getElementById('pharmacy-phone').value;
+                const pharmacyFax = document.getElementById('pharmacy-fax').value;
+                const pharmacyEmail = document.getElementById('pharmacy-email').value;
+                
+                const patientName = document.getElementById('patient-name').value;
+                const patientAddress = document.getElementById('patient-address').value;
+                
+                const certDate = document.getElementById('cert-date').value;
+                const leaveStart = document.getElementById('leave-start').value;
+                const leaveEnd = document.getElementById('leave-end').value;
+                
+                const pharmacistName = document.getElementById('pharmacist-name').value;
+                const registrationNo = document.getElementById('registration-no').value;
+                
+                // Format dates for display
+                const formattedCertDate = formatDate(certDate);
+                const formattedLeaveStart = formatDate(leaveStart);
+                const formattedLeaveEnd = formatDate(leaveEnd);
+                
+                // Create the certificate HTML with Tailwind classes
+                const certificateHTML = `
+    <div
+    id="printable-certificate"
+    class="certificate-wrapper bg-white rounded-lg shadow-lg p-6 mb-8 max-w-4xl mx-auto print:bg-transparent print:shadow-none print:rounded-none print:p-0 print:m-0 print:max-w-full print:w-auto print:mx-0" style="width: 210mm; height: auto; max-height: 280mm;">
+                <div class="flex justify-between items-start mb-8">
+                            <div class="flex items-start">
+                                <div class="pharmacy-logo w-40 text-center mr-4">
+                                    <img src="priceline-logo2.webp" alt="Priceline Pharmacy Logo" class="w-full h-auto">
+                                </div>
+                                
+                                <div class="pharmacy-info">
+                                    <p class="font-bold uppercase">${pharmacyName}</p>
+                                    <p class="uppercase">${pharmacyAddress1}</p>
+                                    <p class="uppercase">${pharmacyAddress2}</p>
+                                    <p class="uppercase">${pharmacyAddress3}</p>
+                                    <p class="uppercase">${pharmacyAddress4}</p>
+                                    <p class="uppercase">${pharmacyPostcode}</p>
+                                    <p>Phone: ${pharmacyPhone}</p>
+                                    <p>Fax: ${pharmacyFax}</p>
+                                    <p>Email: ${pharmacyEmail}</p>
+                                </div>
+                            </div>
+                            
+                            <div class="certificate-title text-center border-2 border-gray-800 p-4" style="width: 180px;">
+                                <h2 class="text-xl font-bold">Certificate for<br>Personal Leave</h2>
+                            </div>
+                        </div>
+                        
+                        <div class="certificate-body leading-relaxed text-gray-800 mb-6">
+                            <p class="mb-4">This certificate is to certify that on ${formattedCertDate}</p>
+                            <p class="mb-4"><span class="font-bold">${patientName}</span> of ${patientAddress} presented at this pharmacy.</p>
+                            
+                            <p class="mb-6">In my professional opinion, based on the information provided to me at the time, <span class="font-bold">${patientName}</span> will be unfit to attend work/school for the period commencing ${formattedLeaveStart} to ${formattedLeaveEnd}.</p>
+                                                    
+                            <p class="mb-6">This opinion was provided in my capacity as pharmacist for the purpose of informing the employer of the named person that he/she is unfit for work due to illness/injury.</p>
+                            
+                            <div class="signature-section border-t border-gray-300 pt-4 mt-10">
+                                <p class="font-bold mb-2">This certificate was provided by</p>
+                                
+                                <p class="mb-1">Date: ${formattedCertDate}</p>
+                                <p class="mb-4">Pharmacist signature: <strong><em>${pharmacistName}</em></strong></p>
+                                
+                                <p class="mb-1">Name: ${pharmacistName}</p>
+                                <p class="mb-4">Registration no: ${registrationNo}</p>
+                                
+                                <p class="mb-1">In accordance with the evidence requirements under section 107(3) of the Fair Work Act 2009 at</p>
+                                <p class="mb-0">${pharmacyName}, ${pharmacyAddress1}, ${pharmacyAddress2}</p>
+                                <p class="mb-0">${pharmacyAddress3}, ${pharmacyAddress4} ${pharmacyPostcode}</p>
+                                <p class="mb-2">Phone ${pharmacyPhone}</p>
+                            </div>
+                            
+                            <div class="footer-text text-xs leading-snug text-gray-600 mt-10">
+                                <p class="text-[8px]">This Certificate for Leave ("Document") has been developed in electronic format by MedAdvisor International Pty Ltd ("MedAdvisor") based on the Guidelines for pharmacists issuing certificates for absence from work (October 2010) developed by Pharmaceutical Society of Australia and the Pharmacy Guild of Australia (the Guidelines). The Document must be used in accordance with the Guidelines and other relevant industry standards, codes, regulations and laws.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mb-12">
+        <p class="text-sm text-gray-500 print:hidden">
+            Tip: For a clean certificate, disable headers and footers in your print settings.
+        </p>
+        <br/>
 
-        async function downloadPDF() {
-    const certEl = document.getElementById('printable-certificate');
-    if (!certEl) {
-        alert('Please generate the certificate first.');
-        return;
-    }
+        <button onclick="printCertificate()" class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition transform hover:scale-105 print:hidden mr-4 no-export">
+            <i class="fas fa-print mr-2"></i> Print Certificate
+        </button>
 
-    // Clone certificate and remove UI controls so they don't show in the image
-    const clone = certEl.cloneNode(true);
-    clone.style.boxShadow = 'none';
-    clone.style.background = window.getComputedStyle(certEl).background || '#fff';
-    clone.querySelectorAll('.no-export').forEach(n => n.remove());
-    // place it off-screen for rendering
-    clone.style.position = 'fixed';
-    clone.style.left = '-9999px';
-    document.body.appendChild(clone);
+        <!-- NEW: Download as PDF -->
+        <button onclick="downloadPDF()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 transition transform hover:scale-105 print:hidden mr-4 no-export">
+            <i class="fas fa-download mr-2"></i> Download as PDF
+        </button>
 
-    try {
-        // High resolution capture
-        const canvas = await html2canvas(clone, { scale: 2, useCORS: true, allowTaint: true });
+        <button onclick="confetti()" class="bg-purple-500 hover:bg-purple-600 text-white font-medium py-2 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 transition transform hover:scale-105 print:hidden no-export">
+            <i class="fas fa-glass-cheers mr-2"></i> Celebrate Your Day Off!
+        </button>
+    </div>
+                `;
+                
+                // Display the certificate
+                document.getElementById('certificate-container').innerHTML = certificateHTML;
 
-        // Prepare jsPDF
-        const { jsPDF } = window.jspdf;
-        const pdf = new jsPDF('p', 'mm', 'a4');
-        const pageWidth = pdf.internal.pageSize.getWidth();
-        const pageHeight = pdf.internal.pageSize.getHeight();
-
-        // Full image width on PDF (mm)
-        const imgWidth = pageWidth;
-        // Calculate the image height to keep aspect ratio
-        const imgHeight = (canvas.height * imgWidth) / canvas.width;
-
-        if (imgHeight <= pageHeight) {
-            // Single page
-            const imgData = canvas.toDataURL('image/png');
-            pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
-        } else {
-            // Multi-page: slice the canvas vertically into A4-height pieces
-            const pageHeightPx = Math.floor(canvas.width * (pageHeight / pageWidth));
-            let y = 0;
-            while (y < canvas.height) {
-                const pageCanvas = document.createElement('canvas');
-                pageCanvas.width = canvas.width;
-                pageCanvas.height = Math.min(pageHeightPx, canvas.height - y);
-                const ctx = pageCanvas.getContext('2d');
-                ctx.drawImage(canvas, 0, y, canvas.width, pageCanvas.height, 0, 0, canvas.width, pageCanvas.height);
-
-                const pageImgData = pageCanvas.toDataURL('image/png');
-                const pageImgHeight = (pageCanvas.height * imgWidth) / pageCanvas.width;
-
-                pdf.addImage(pageImgData, 'PNG', 0, 0, imgWidth, pageImgHeight);
-
-                y += pageHeightPx;
-                if (y < canvas.height) pdf.addPage();
+                // Scroll to the certificate
+                document.getElementById('certificate-container').scrollIntoView({ behavior: 'smooth' });
             }
+            
+            // Print only the certificate
+            function printCertificate() {
+                const printContent = document.getElementById('printable-certificate');
+                const originalDocument = document.body.innerHTML;
+                
+                // Only print the certificate
+                document.body.innerHTML = printContent.outerHTML;
+                
+                // Print
+                window.print();
+                
+                // Restore original content
+                document.body.innerHTML = originalDocument;
+                
+                // Re-add event listeners after restoring the document
+                setTimeout(() => {
+                    attachEventListeners();
+                    // Re-select the certificate if it was previously generated
+                    const certificate = document.getElementById('printable-certificate');
+                    if (certificate) {
+                        certificate.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }, 100);
+            }
+            
+            // Attach all event listeners
+            function attachEventListeners() {
+                // Landing page button
+                const showGeneratorBtn = document.getElementById('show-generator');
+                if (showGeneratorBtn) {
+                    showGeneratorBtn.addEventListener('click', function() {
+                        document.getElementById('landing').classList.add('hidden');
+                        document.getElementById('generator').classList.remove('hidden');
+                    });
+                }
+                
+                // Back button
+                const backToLandingBtn = document.getElementById('back-to-landing');
+                if (backToLandingBtn) {
+                    backToLandingBtn.addEventListener('click', function() {
+                        document.getElementById('generator').classList.add('hidden');
+                        document.getElementById('landing').classList.remove('hidden');
+                    });
+                }
+                
+                // Generate button
+                const generateCertBtn = document.querySelector('button[onclick="generateCertificate()"]');
+                if (generateCertBtn) {
+                    generateCertBtn.onclick = generateCertificate;
+                }
+                
+                // Print buttons
+                const printBtns = document.querySelectorAll('button[onclick="printCertificate()"]');
+                printBtns.forEach(btn => {
+                    btn.onclick = printCertificate;
+                });
+                
+                // Confetti buttons
+                const confettiBtns = document.querySelectorAll('button[onclick="confetti()"]');
+                confettiBtns.forEach(btn => {
+                    btn.onclick = confetti;
+                });
+            }
+            
+            
+            // Simple confetti function
+            function confetti() {
+                const colors = ['#ff718d', '#fdbb2d', '#22c1c3', '#b721ff', '#21d4fd'];
+                const container = document.createElement('div');
+                container.style.position = 'fixed';
+                container.style.top = '0';
+                container.style.left = '0';
+                container.style.width = '100%';
+                container.style.height = '100%';
+                container.style.pointerEvents = 'none';
+                container.style.zIndex = '9999';
+                document.body.appendChild(container);
+                
+                for (let i = 0; i < 200; i++) {
+                    setTimeout(() => {
+                        const confetti = document.createElement('div');
+                        confetti.style.position = 'absolute';
+                        confetti.style.width = Math.random() * 10 + 5 + 'px';
+                        confetti.style.height = Math.random() * 10 + 5 + 'px';
+                        confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                        confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+                        confetti.style.left = Math.random() * 100 + 'vw';
+                        confetti.style.top = '-20px';
+                        confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+                        container.appendChild(confetti);
+                        
+                        let speed = Math.random() * 3 + 2;
+                        let rotateSpeed = Math.random() * 5 - 2.5;
+                        let horizontalSpeed = Math.random() * 5 - 2.5;
+                        
+                        const fall = () => {
+                            const top = parseFloat(confetti.style.top);
+                            const left = parseFloat(confetti.style.left);
+                            const rotate = parseFloat(confetti.style.transform.replace('rotate(', '').replace('deg)', ''));
+                            
+                            if (top < window.innerHeight) {
+                                confetti.style.top = top + speed + 'px';
+                                confetti.style.left = left + horizontalSpeed + 'vw';
+                                confetti.style.transform = `rotate(${rotate + rotateSpeed}deg)`;
+                                requestAnimationFrame(fall);
+                            } else {
+                                confetti.remove();
+                            }
+                        };
+                        
+                        requestAnimationFrame(fall);
+                    }, Math.random() * 1500);
+                }
+                
+                setTimeout(() => {
+                    container.remove();
+                }, 10000);
+            }
+
+            async function downloadPDF() {
+        const certEl = document.getElementById('printable-certificate');
+        if (!certEl) {
+            alert('Please generate the certificate first.');
+            return;
         }
 
-        pdf.save('certificate.pdf');
-    } catch (err) {
-        console.error(err);
-        alert('Failed to create PDF: ' + (err && err.message ? err.message : err));
-    } finally {
-        clone.remove();
+        // Clone certificate and remove UI controls so they don't show in the image
+        const clone = certEl.cloneNode(true);
+        clone.style.boxShadow = 'none';
+        clone.style.background = window.getComputedStyle(certEl).background || '#fff';
+        clone.querySelectorAll('.no-export').forEach(n => n.remove());
+        // place it off-screen for rendering
+        clone.style.position = 'fixed';
+        clone.style.left = '-9999px';
+        document.body.appendChild(clone);
+
+        try {
+            // High resolution capture
+            const canvas = await html2canvas(clone, { scale: 2, useCORS: true, allowTaint: true });
+
+            // Prepare jsPDF
+            const { jsPDF } = window.jspdf;
+            const pdf = new jsPDF('p', 'mm', 'a4');
+            const pageWidth = pdf.internal.pageSize.getWidth();
+            const pageHeight = pdf.internal.pageSize.getHeight();
+
+            // Full image width on PDF (mm)
+            const imgWidth = pageWidth;
+            // Calculate the image height to keep aspect ratio
+            const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+            if (imgHeight <= pageHeight) {
+                // Single page
+                const imgData = canvas.toDataURL('image/png');
+                pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+            } else {
+                // Multi-page: slice the canvas vertically into A4-height pieces
+                const pageHeightPx = Math.floor(canvas.width * (pageHeight / pageWidth));
+                let y = 0;
+                while (y < canvas.height) {
+                    const pageCanvas = document.createElement('canvas');
+                    pageCanvas.width = canvas.width;
+                    pageCanvas.height = Math.min(pageHeightPx, canvas.height - y);
+                    const ctx = pageCanvas.getContext('2d');
+                    ctx.drawImage(canvas, 0, y, canvas.width, pageCanvas.height, 0, 0, canvas.width, pageCanvas.height);
+
+                    const pageImgData = pageCanvas.toDataURL('image/png');
+                    const pageImgHeight = (pageCanvas.height * imgWidth) / pageCanvas.width;
+
+                    pdf.addImage(pageImgData, 'PNG', 0, 0, imgWidth, pageImgHeight);
+
+                    y += pageHeightPx;
+                    if (y < canvas.height) pdf.addPage();
+                }
+            }
+
+            pdf.save('certificate.pdf');
+        } catch (err) {
+            console.error(err);
+            alert('Failed to create PDF: ' + (err && err.message ? err.message : err));
+        } finally {
+            clone.remove();
+        }
     }
-}
 
-    </script>
-
+        </script>
 
 
 
@@ -699,84 +700,85 @@
 
 
 
-    <style>
-   @media print {
-  body * {
-    visibility: hidden;
-  }
-  #printable-certificate, #printable-certificate * {
-    visibility: visible;
-  }
-  #printable-certificate {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-  }
 
-  /* Hide page URL / title (sometimes browsers honor this) */
-  @page {
-    margin: 20mm;
-    size: A4 portrait;
-  }
-}
+        <style>
+    @media print {
+    body * {
+        visibility: hidden;
+    }
+    #printable-certificate, #printable-certificate * {
+        visibility: visible;
+    }
+    #printable-certificate {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    /* Hide page URL / title (sometimes browsers honor this) */
+    @page {
+        margin: 20mm;
+        size: A4 portrait;
+    }
+    }
 
 
-@media print {
-  .certificate-wrapper {
-    background: none !important;
-    box-shadow: none !important;
-    border-radius: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-}
+    @media print {
+    .certificate-wrapper {
+        background: none !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    }
 
-@media print {
-  /* kill any page background/gradients */
-  html, body {
-    background: #ffffff !important;
-  }
+    @media print {
+    /* kill any page background/gradients */
+    html, body {
+        background: #ffffff !important;
+    }
 
-  /* hard override the wrapper, in case classes change later */
-  #printable-certificate {
-    background: none !important;
-    box-shadow: none !important;
-    border-radius: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-  }
+    /* hard override the wrapper, in case classes change later */
+    #printable-certificate {
+        background: none !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
 
-  /* neutralize common Tailwind “boxy” utilities anywhere inside */
-  .shadow, .shadow-md, .shadow-lg, .shadow-xl, .shadow-2xl,
-  .rounded, .rounded-md, .rounded-lg, .rounded-xl, .rounded-2xl {
-    box-shadow: none !important;
-    border-radius: 0 !important;
-  }
+    /* neutralize common Tailwind “boxy” utilities anywhere inside */
+    .shadow, .shadow-md, .shadow-lg, .shadow-xl, .shadow-2xl,
+    .rounded, .rounded-md, .rounded-lg, .rounded-xl, .rounded-2xl {
+        box-shadow: none !important;
+        border-radius: 0 !important;
+    }
 
-  /* if your page has containers that center/narrow the layout, let the cert go full width on paper */
-  .container, .mx-auto, .max-w-4xl {
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
+    /* if your page has containers that center/narrow the layout, let the cert go full width on paper */
+    .container, .mx-auto, .max-w-4xl {
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
 
-  /* optional: keep your internal content margins readable without the outer “card” padding */
-  #printable-certificate .certificate-body {
-    padding: 0 !important;
-  }
+    /* optional: keep your internal content margins readable without the outer “card” padding */
+    #printable-certificate .certificate-body {
+        padding: 0 !important;
+    }
 
-  /* page setup (doesn’t control headers/footers, but sets nice margins) */
-  @page {
-    size: A4 portrait;
-    margin: 20mm;
-  }
-}
-    </style>
-</body>
-</html>
+    /* page setup (doesn’t control headers/footers, but sets nice margins) */
+    @page {
+        size: A4 portrait;
+        margin: 20mm;
+    }
+    }
+        </style>
+    </body>
+    </html>
