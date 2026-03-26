@@ -329,35 +329,35 @@
     
   <script>
 
-        function skipToGenerator() {
+            function skipToGenerator() {
             document.getElementById('landing').classList.add('hidden');
             document.getElementById('generator').classList.remove('hidden');
-        
-            // Optional: Scroll to top of generator
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Set today's date as default when the page loads + check for successful payment
+        // Updated onload - directly show generator if coming from successful payment
         window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const isPaidSuccess = urlParams.get('paid') === 'success';
+
+            // Set default dates
             const today = new Date();
             const formattedDate = today.toISOString().substr(0, 10);
             document.getElementById('cert-date').value = formattedDate;
             document.getElementById('leave-start').value = formattedDate;
             
-            // Set end date as tomorrow by default
             const tomorrow = new Date();
             tomorrow.setDate(today.getDate() + 1);
             document.getElementById('leave-end').value = tomorrow.toISOString().substr(0, 10);
 
-            // NEW: Auto-show generator only if payment was successful
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.get('paid') === 'success') {
+            if (isPaidSuccess) {
+                // Hide landing completely and show ONLY generator
                 document.getElementById('landing').classList.add('hidden');
                 document.getElementById('generator').classList.remove('hidden');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-            
-            // Add event listeners
+            } 
+            // If not paid success, show landing normally (test button still works)
+
             attachEventListeners();
         };
         
