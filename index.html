@@ -241,47 +241,47 @@
                     <h1 class="text-3xl font-bold text-gray-800 mb-6">Chuck a Sickie - Medical Certificate Generator</h1>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="form-group">
+                        <div class="form-group admin-only">
                             <label for="pharmacy-name" class="block text-sm font-medium text-gray-700 mb-1">Pharmacy Name:</label>
                             <input type="text" id="pharmacy-name" value="PRICELINE PHARMACY ROSELANDS" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
                         </div>
                         
-                        <div class="form-group">
+                        <div class="form-group admin-only">
                             <label for="pharmacy-address1" class="block text-sm font-medium text-gray-700 mb-1">Address Line 1:</label>
                             <input type="text" id="pharmacy-address1" value="SHOP L25, LOWER GROUND," class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
                         </div>
                         
-                        <div class="form-group">
+                        <div class="form-group admin-only">
                             <label for="pharmacy-address2" class="block text-sm font-medium text-gray-700 mb-1">Address Line 2:</label>
                             <input type="text" id="pharmacy-address2" value="ROSELANDS SHOPPING CENTRE" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
                         </div>
                         
-                        <div class="form-group">
+                        <div class="form-group admin-only">
                             <label for="pharmacy-address3" class="block text-sm font-medium text-gray-700 mb-1">Address Line 3:</label>
                             <input type="text" id="pharmacy-address3" value="ROSELANDS DRIVE" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
                         </div>
                         
-                        <div class="form-group">
+                        <div class="form-group admin-only">
                             <label for="pharmacy-address4" class="block text-sm font-medium text-gray-700 mb-1">Address Line 4:</label>
                             <input type="text" id="pharmacy-address4" value="ROSELANDS" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
                         </div>
                         
-                        <div class="form-group">
+                        <div class="form-group admin-only">
                             <label for="pharmacy-postcode" class="block text-sm font-medium text-gray-700 mb-1">State & Postcode:</label>
                             <input type="text" id="pharmacy-postcode" value="NSW 2196" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
                         </div>
                         
-                        <div class="form-group">
+                        <div class="form-group admin-only">
                             <label for="pharmacy-phone" class="block text-sm font-medium text-gray-700 mb-1">Phone:</label>
                             <input type="text" id="pharmacy-phone" value="02 9759 1444" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
                         </div>
                         
-                        <div class="form-group">
+                        <div class="form-group admin-only">
                             <label for="pharmacy-fax" class="block text-sm font-medium text-gray-700 mb-1">Fax:</label>
                             <input type="text" id="pharmacy-fax" value="02 9759 9205" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
                         </div>
                         
-                        <div class="form-group">
+                        <div class="form-group admin-only">
                             <label for="pharmacy-email" class="block text-sm font-medium text-gray-700 mb-1">Email:</label>
                             <input type="text" id="pharmacy-email" value="priosmanagement@gmail.com" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
                         </div>
@@ -311,12 +311,12 @@
                             <input type="date" id="leave-end" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
                         </div>
                         
-                        <div class="form-group">
+                        <div class="form-group admin-only">
                             <label for="pharmacist-name" class="block text-sm font-medium text-gray-700 mb-1">Pharmacist Name:</label>
                             <input type="text" id="pharmacist-name" value="JASON DEMYANE" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
                         </div>
                         
-                        <div class="form-group">
+                        <div class="form-group admin-only">
                             <label for="registration-no" class="block text-sm font-medium text-gray-700 mb-1">Registration Number:</label>
                             <input type="text" id="registration-no" value="PHA0002242371" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
                         </div>
@@ -330,6 +330,12 @@
         </div>
         
     <script>
+        
+            const isPaidSuccess = urlParams.get('paid') === 'success';
+
+            if (isPaidSuccess) {
+            document.body.classList.add('customer-mode');
+            }
 
 
             function skipToGenerator() {
@@ -702,6 +708,11 @@
 
 
         <style>
+
+    .customer-mode .admin-only {
+    display: none !important;
+    }
+    
     @media print {
     body * {
         visibility: hidden;
