@@ -335,8 +335,7 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Updated onload - directly show generator if coming from successful payment
-        window.onload = function() {
+                window.onload = function() {
             const urlParams = new URLSearchParams(window.location.search);
             const isPaidSuccess = urlParams.get('paid') === 'success';
 
@@ -351,12 +350,12 @@
             document.getElementById('leave-end').value = tomorrow.toISOString().substr(0, 10);
 
             if (isPaidSuccess) {
-                // Hide landing completely and show ONLY generator
-                document.getElementById('landing').classList.add('hidden');
+                // Hide landing completely and show only generator
+                document.getElementById('landing').remove();           // Completely remove from DOM
                 document.getElementById('generator').classList.remove('hidden');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            } 
-            // If not paid success, show landing normally (test button still works)
+                document.getElementById('generator').style.marginTop = '0';
+                window.scrollTo({ top: 0, behavior: 'instant' });
+            }
 
             attachEventListeners();
         };
